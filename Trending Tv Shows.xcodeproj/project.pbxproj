@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5730E32E25A6BFD200BD7D91 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E32D25A6BFD200BD7D91 /* TabBarViewController.swift */; };
+		5730E33325A6C0B000BD7D91 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E33225A6C0B000BD7D91 /* TodayViewController.swift */; };
+		5730E34325A6C6ED00BD7D91 /* Shows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E34225A6C6ED00BD7D91 /* Shows.swift */; };
+		5730E34825A6CEC900BD7D91 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E34725A6CEC900BD7D91 /* NetworkManager.swift */; };
+		5730E34D25A6CF0800BD7D91 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E34C25A6CF0800BD7D91 /* ErrorMessage.swift */; };
 		57E3B75325A563BB00C98BF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3B75225A563BB00C98BF6 /* AppDelegate.swift */; };
 		57E3B75525A563BB00C98BF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3B75425A563BB00C98BF6 /* SceneDelegate.swift */; };
-		57E3B75725A563BB00C98BF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3B75625A563BB00C98BF6 /* ViewController.swift */; };
-		57E3B75A25A563BB00C98BF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E3B75825A563BB00C98BF6 /* Main.storyboard */; };
+		57E3B75725A563BB00C98BF6 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3B75625A563BB00C98BF6 /* FavoriteViewController.swift */; };
 		57E3B75C25A563BB00C98BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E3B75B25A563BB00C98BF6 /* Assets.xcassets */; };
 		57E3B75F25A563BB00C98BF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E3B75D25A563BB00C98BF6 /* LaunchScreen.storyboard */; };
 		57E3B76A25A563BC00C98BF6 /* Trending_Tv_ShowsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3B76925A563BC00C98BF6 /* Trending_Tv_ShowsTests.swift */; };
@@ -35,11 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5730E32D25A6BFD200BD7D91 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		5730E33225A6C0B000BD7D91 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		5730E34225A6C6ED00BD7D91 /* Shows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shows.swift; sourceTree = "<group>"; };
+		5730E34725A6CEC900BD7D91 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5730E34C25A6CF0800BD7D91 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		57E3B74F25A563BB00C98BF6 /* Trending Tv Shows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trending Tv Shows.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E3B75225A563BB00C98BF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57E3B75425A563BB00C98BF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		57E3B75625A563BB00C98BF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		57E3B75925A563BB00C98BF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		57E3B75625A563BB00C98BF6 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		57E3B75B25A563BB00C98BF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57E3B75E25A563BB00C98BF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57E3B76025A563BC00C98BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +84,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5730E33A25A6C2DF00BD7D91 /* Tab Controllers  */ = {
+			isa = PBXGroup;
+			children = (
+				5730E32D25A6BFD200BD7D91 /* TabBarViewController.swift */,
+			);
+			path = "Tab Controllers ";
+			sourceTree = "<group>";
+		};
+		5730E33E25A6C2F900BD7D91 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5730E33225A6C0B000BD7D91 /* TodayViewController.swift */,
+				57E3B75625A563BB00C98BF6 /* FavoriteViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5730E35425A6D77000BD7D91 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5730E34725A6CEC900BD7D91 /* NetworkManager.swift */,
+				5730E34C25A6CF0800BD7D91 /* ErrorMessage.swift */,
+				5730E34225A6C6ED00BD7D91 /* Shows.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		57E3B74625A563BB00C98BF6 = {
 			isa = PBXGroup;
 			children = (
@@ -100,9 +135,10 @@
 			isa = PBXGroup;
 			children = (
 				57E3B75225A563BB00C98BF6 /* AppDelegate.swift */,
+				5730E35425A6D77000BD7D91 /* Models */,
+				5730E33A25A6C2DF00BD7D91 /* Tab Controllers  */,
+				5730E33E25A6C2F900BD7D91 /* View Controllers */,
 				57E3B75425A563BB00C98BF6 /* SceneDelegate.swift */,
-				57E3B75625A563BB00C98BF6 /* ViewController.swift */,
-				57E3B75825A563BB00C98BF6 /* Main.storyboard */,
 				57E3B75B25A563BB00C98BF6 /* Assets.xcassets */,
 				57E3B75D25A563BB00C98BF6 /* LaunchScreen.storyboard */,
 				57E3B76025A563BC00C98BF6 /* Info.plist */,
@@ -233,7 +269,6 @@
 			files = (
 				57E3B75F25A563BB00C98BF6 /* LaunchScreen.storyboard in Resources */,
 				57E3B75C25A563BB00C98BF6 /* Assets.xcassets in Resources */,
-				57E3B75A25A563BB00C98BF6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +293,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57E3B75725A563BB00C98BF6 /* ViewController.swift in Sources */,
+				5730E32E25A6BFD200BD7D91 /* TabBarViewController.swift in Sources */,
+				57E3B75725A563BB00C98BF6 /* FavoriteViewController.swift in Sources */,
+				5730E33325A6C0B000BD7D91 /* TodayViewController.swift in Sources */,
+				5730E34825A6CEC900BD7D91 /* NetworkManager.swift in Sources */,
+				5730E34D25A6CF0800BD7D91 /* ErrorMessage.swift in Sources */,
 				57E3B75325A563BB00C98BF6 /* AppDelegate.swift in Sources */,
+				5730E34325A6C6ED00BD7D91 /* Shows.swift in Sources */,
 				57E3B75525A563BB00C98BF6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,14 +336,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		57E3B75825A563BB00C98BF6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				57E3B75925A563BB00C98BF6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		57E3B75D25A563BB00C98BF6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -445,7 +477,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "N-A.Trending-Tv-Shows";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -463,7 +495,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "N-A.Trending-Tv-Shows";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
