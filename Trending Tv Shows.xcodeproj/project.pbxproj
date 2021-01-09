@@ -8,10 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		5730E32E25A6BFD200BD7D91 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E32D25A6BFD200BD7D91 /* TabBarViewController.swift */; };
-		5730E33325A6C0B000BD7D91 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E33225A6C0B000BD7D91 /* TodayViewController.swift */; };
+		5730E33325A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E33225A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift */; };
 		5730E34325A6C6ED00BD7D91 /* Shows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E34225A6C6ED00BD7D91 /* Shows.swift */; };
 		5730E34825A6CEC900BD7D91 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E34725A6CEC900BD7D91 /* NetworkManager.swift */; };
 		5730E34D25A6CF0800BD7D91 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E34C25A6CF0800BD7D91 /* ErrorMessage.swift */; };
+		5760A60925A97D0C0011CF3B /* SecondaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760A60825A97D0C0011CF3B /* SecondaryLabel.swift */; };
+		5760A61025A97E9F0011CF3B /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760A60F25A97E9F0011CF3B /* TextField.swift */; };
+		5760A61825A97FFC0011CF3B /* TvImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760A61725A97FFC0011CF3B /* TvImage.swift */; };
+		57AD1C0F25A97A250079E829 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AD1C0E25A97A250079E829 /* TitleLabel.swift */; };
+		57AD1C1425A97B450079E829 /* BodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AD1C1325A97B450079E829 /* BodyLabel.swift */; };
 		57E3B75325A563BB00C98BF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3B75225A563BB00C98BF6 /* AppDelegate.swift */; };
 		57E3B75525A563BB00C98BF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3B75425A563BB00C98BF6 /* SceneDelegate.swift */; };
 		57E3B75725A563BB00C98BF6 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3B75625A563BB00C98BF6 /* FavoriteViewController.swift */; };
@@ -40,10 +45,15 @@
 
 /* Begin PBXFileReference section */
 		5730E32D25A6BFD200BD7D91 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		5730E33225A6C0B000BD7D91 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		5730E33225A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyViewControllerViewController.swift; sourceTree = "<group>"; };
 		5730E34225A6C6ED00BD7D91 /* Shows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shows.swift; sourceTree = "<group>"; };
 		5730E34725A6CEC900BD7D91 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5730E34C25A6CF0800BD7D91 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		5760A60825A97D0C0011CF3B /* SecondaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryLabel.swift; sourceTree = "<group>"; };
+		5760A60F25A97E9F0011CF3B /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		5760A61725A97FFC0011CF3B /* TvImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvImage.swift; sourceTree = "<group>"; };
+		57AD1C0E25A97A250079E829 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
+		57AD1C1325A97B450079E829 /* BodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyLabel.swift; sourceTree = "<group>"; };
 		57E3B74F25A563BB00C98BF6 /* Trending Tv Shows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trending Tv Shows.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E3B75225A563BB00C98BF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57E3B75425A563BB00C98BF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,7 +105,7 @@
 		5730E33E25A6C2F900BD7D91 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5730E33225A6C0B000BD7D91 /* TodayViewController.swift */,
+				5730E33225A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift */,
 				57E3B75625A563BB00C98BF6 /* FavoriteViewController.swift */,
 			);
 			path = "View Controllers";
@@ -109,6 +119,24 @@
 				5730E34225A6C6ED00BD7D91 /* Shows.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5760A60D25A97D360011CF3B /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				57AD1C0E25A97A250079E829 /* TitleLabel.swift */,
+				5760A60825A97D0C0011CF3B /* SecondaryLabel.swift */,
+				57AD1C1325A97B450079E829 /* BodyLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		5760A60E25A97E480011CF3B /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				5760A60F25A97E9F0011CF3B /* TextField.swift */,
+			);
+			path = TextFields;
 			sourceTree = "<group>";
 		};
 		57E3B74625A563BB00C98BF6 = {
@@ -138,9 +166,12 @@
 				5730E35425A6D77000BD7D91 /* Models */,
 				5730E33A25A6C2DF00BD7D91 /* Tab Controllers  */,
 				5730E33E25A6C2F900BD7D91 /* View Controllers */,
-				57E3B75425A563BB00C98BF6 /* SceneDelegate.swift */,
+				5760A60D25A97D360011CF3B /* Labels */,
+				5760A60E25A97E480011CF3B /* TextFields */,
+				57F31A6A25A9925700D788FE /* Image */,
 				57E3B75B25A563BB00C98BF6 /* Assets.xcassets */,
 				57E3B75D25A563BB00C98BF6 /* LaunchScreen.storyboard */,
+				57E3B75425A563BB00C98BF6 /* SceneDelegate.swift */,
 				57E3B76025A563BC00C98BF6 /* Info.plist */,
 			);
 			path = "Trending Tv Shows";
@@ -162,6 +193,14 @@
 				57E3B77625A563BC00C98BF6 /* Info.plist */,
 			);
 			path = "Trending Tv ShowsUITests";
+			sourceTree = "<group>";
+		};
+		57F31A6A25A9925700D788FE /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				5760A61725A97FFC0011CF3B /* TvImage.swift */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,12 +333,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5730E32E25A6BFD200BD7D91 /* TabBarViewController.swift in Sources */,
+				5760A61825A97FFC0011CF3B /* TvImage.swift in Sources */,
 				57E3B75725A563BB00C98BF6 /* FavoriteViewController.swift in Sources */,
-				5730E33325A6C0B000BD7D91 /* TodayViewController.swift in Sources */,
+				57AD1C1425A97B450079E829 /* BodyLabel.swift in Sources */,
+				5760A61025A97E9F0011CF3B /* TextField.swift in Sources */,
+				5730E33325A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift in Sources */,
 				5730E34825A6CEC900BD7D91 /* NetworkManager.swift in Sources */,
 				5730E34D25A6CF0800BD7D91 /* ErrorMessage.swift in Sources */,
 				57E3B75325A563BB00C98BF6 /* AppDelegate.swift in Sources */,
+				57AD1C0F25A97A250079E829 /* TitleLabel.swift in Sources */,
 				5730E34325A6C6ED00BD7D91 /* Shows.swift in Sources */,
+				5760A60925A97D0C0011CF3B /* SecondaryLabel.swift in Sources */,
 				57E3B75525A563BB00C98BF6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
