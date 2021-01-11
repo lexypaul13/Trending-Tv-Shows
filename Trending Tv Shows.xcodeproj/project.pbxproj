@@ -15,6 +15,7 @@
 		5760A60925A97D0C0011CF3B /* SecondaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760A60825A97D0C0011CF3B /* SecondaryLabel.swift */; };
 		5760A61025A97E9F0011CF3B /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760A60F25A97E9F0011CF3B /* TextField.swift */; };
 		5760A61825A97FFC0011CF3B /* TvImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760A61725A97FFC0011CF3B /* TvImage.swift */; };
+		57A730A425AC725C0091ED84 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A730A325AC725C0091ED84 /* AnimationViewController.swift */; };
 		57AD1C0F25A97A250079E829 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AD1C0E25A97A250079E829 /* TitleLabel.swift */; };
 		57AD1C1425A97B450079E829 /* BodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AD1C1325A97B450079E829 /* BodyLabel.swift */; };
 		57E3B75325A563BB00C98BF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3B75225A563BB00C98BF6 /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 		57E3B75F25A563BB00C98BF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E3B75D25A563BB00C98BF6 /* LaunchScreen.storyboard */; };
 		57E3B76A25A563BC00C98BF6 /* Trending_Tv_ShowsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3B76925A563BC00C98BF6 /* Trending_Tv_ShowsTests.swift */; };
 		57E3B77525A563BC00C98BF6 /* Trending_Tv_ShowsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3B77425A563BC00C98BF6 /* Trending_Tv_ShowsUITests.swift */; };
+		57EB3D4825AAB91000265DCF /* TvCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3D4725AAB91000265DCF /* TvCellCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,7 @@
 		5760A60825A97D0C0011CF3B /* SecondaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryLabel.swift; sourceTree = "<group>"; };
 		5760A60F25A97E9F0011CF3B /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		5760A61725A97FFC0011CF3B /* TvImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvImage.swift; sourceTree = "<group>"; };
+		57A730A325AC725C0091ED84 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		57AD1C0E25A97A250079E829 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
 		57AD1C1325A97B450079E829 /* BodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyLabel.swift; sourceTree = "<group>"; };
 		57E3B74F25A563BB00C98BF6 /* Trending Tv Shows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trending Tv Shows.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +70,7 @@
 		57E3B77025A563BC00C98BF6 /* Trending Tv ShowsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trending Tv ShowsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E3B77425A563BC00C98BF6 /* Trending_Tv_ShowsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trending_Tv_ShowsUITests.swift; sourceTree = "<group>"; };
 		57E3B77625A563BC00C98BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57EB3D4725AAB91000265DCF /* TvCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvCellCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,13 +106,14 @@
 			path = "Tab Controllers ";
 			sourceTree = "<group>";
 		};
-		5730E33E25A6C2F900BD7D91 /* View Controllers */ = {
+		5730E33E25A6C2F900BD7D91 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				5730E33225A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift */,
+				57EB3D4725AAB91000265DCF /* TvCellCollectionViewCell.swift */,
 				57E3B75625A563BB00C98BF6 /* FavoriteViewController.swift */,
 			);
-			path = "View Controllers";
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		5730E35425A6D77000BD7D91 /* Models */ = {
@@ -142,6 +147,7 @@
 		57E3B74625A563BB00C98BF6 = {
 			isa = PBXGroup;
 			children = (
+				57A730A325AC725C0091ED84 /* AnimationViewController.swift */,
 				57E3B75125A563BB00C98BF6 /* Trending Tv Shows */,
 				57E3B76825A563BC00C98BF6 /* Trending Tv ShowsTests */,
 				57E3B77325A563BC00C98BF6 /* Trending Tv ShowsUITests */,
@@ -163,9 +169,10 @@
 			isa = PBXGroup;
 			children = (
 				57E3B75225A563BB00C98BF6 /* AppDelegate.swift */,
+				57EB3D4C25AABA1100265DCF /* New Group */,
 				5730E35425A6D77000BD7D91 /* Models */,
 				5730E33A25A6C2DF00BD7D91 /* Tab Controllers  */,
-				5730E33E25A6C2F900BD7D91 /* View Controllers */,
+				5730E33E25A6C2F900BD7D91 /* Screens */,
 				5760A60D25A97D360011CF3B /* Labels */,
 				5760A60E25A97E480011CF3B /* TextFields */,
 				57F31A6A25A9925700D788FE /* Image */,
@@ -193,6 +200,13 @@
 				57E3B77625A563BC00C98BF6 /* Info.plist */,
 			);
 			path = "Trending Tv ShowsUITests";
+			sourceTree = "<group>";
+		};
+		57EB3D4C25AABA1100265DCF /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		57F31A6A25A9925700D788FE /* Image */ = {
@@ -340,9 +354,11 @@
 				5730E33325A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift in Sources */,
 				5730E34825A6CEC900BD7D91 /* NetworkManager.swift in Sources */,
 				5730E34D25A6CF0800BD7D91 /* ErrorMessage.swift in Sources */,
+				57EB3D4825AAB91000265DCF /* TvCellCollectionViewCell.swift in Sources */,
 				57E3B75325A563BB00C98BF6 /* AppDelegate.swift in Sources */,
 				57AD1C0F25A97A250079E829 /* TitleLabel.swift in Sources */,
 				5730E34325A6C6ED00BD7D91 /* Shows.swift in Sources */,
+				57A730A425AC725C0091ED84 /* AnimationViewController.swift in Sources */,
 				5760A60925A97D0C0011CF3B /* SecondaryLabel.swift in Sources */,
 				57E3B75525A563BB00C98BF6 /* SceneDelegate.swift in Sources */,
 			);

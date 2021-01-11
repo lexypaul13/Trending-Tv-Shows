@@ -11,7 +11,7 @@ class BodyLabel: UILabel {
 
     override init (frame:CGRect){
         super.init(frame:frame)
-        configure()
+        set()
     }
     
     required init?(coder: NSCoder) {
@@ -24,7 +24,7 @@ class BodyLabel: UILabel {
         self.textAlignment = textAlignment
     }
     
-    private func configure () {
+    private func set () {
         textColor = .secondaryLabel
         font = UIFont.preferredFont(forTextStyle: .body)
         adjustsFontSizeToFitWidth = true

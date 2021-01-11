@@ -5,18 +5,19 @@
 //  Created by Alex Paul on 1/7/21.
 //
 
-import Foundation
+import UIKit
 
 class NetworkManger {
     static let shared = NetworkManger()
-    private let baseURL = "https://api.themoviedb.org/3/trending/tv/week?api_key=352b794e6bc3be2fe8b0b6b3d7221ac1"
-    let cache   = NSCache<NSString, UIImage>() //creates cache to store image
+     let baseURL = "https://api.themoviedb.org/3/trending/tv/week?api_key=352b794e6bc3be2fe8b0b6b3d7221ac1"
+     let cache   = NSCache<NSString, UIImage>() //creates cache to store image
 
     private init (){}
 
     
-    func getShows(for shows:String, page: Int, completed:@escaping(Result<[Shows],ErroMessage>)->Void){
-        let endpoint = baseURL + "\(shows)/language=en-US&page=\(page)"
+    func getShows(page: Int, completed:@escaping(Result<[Shows],ErroMessage>)->Void){
+        
+        let endpoint = baseURL + "language=en-US&page=\(page)"
         guard let url = URL(string: endpoint) else{
             completed(.failure(.invalidTvName))
             return

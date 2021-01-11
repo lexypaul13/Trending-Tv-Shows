@@ -26,7 +26,7 @@ class TvImage: UIImageView {
         translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func downloadAvatarImage(_ url:String) { //refactor image downloadr (12)
+    func downloadAvatarImage(_ url:String) { 
         NetworkManger.shared.downloadImage(from:url) { [weak self] image in
             guard let self = self else { return }
             DispatchQueue.main.async { self.image = image }

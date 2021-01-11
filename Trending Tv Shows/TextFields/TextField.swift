@@ -11,7 +11,7 @@ class TextField: UITextField {
 
     override init(frame: CGRect){
         super.init(frame: frame)
-        configure()
+        set()
     }
     
     required init?(coder: NSCoder) {
@@ -20,7 +20,7 @@ class TextField: UITextField {
     
     
     
-    private func configure (){
+    private func set (){
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius = 25
         layer.borderWidth = 2

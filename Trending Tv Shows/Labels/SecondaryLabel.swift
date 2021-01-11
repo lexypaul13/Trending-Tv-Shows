@@ -11,6 +11,8 @@ class SecondaryLabel: UILabel {
     
     override init(frame:CGRect){
         super.init(frame: frame)
+        set()
+
     }
     
     required init?(coder: NSCoder) {
@@ -20,10 +22,9 @@ class SecondaryLabel: UILabel {
     init(fontSize:CGFloat){
         super.init(frame: .zero)
         font = UIFont.systemFont(ofSize: fontSize, weight: .medium)
-        configure()
     }
     
-    private func configure(){
+    private func set(){
         textColor = .secondaryLabel
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.90

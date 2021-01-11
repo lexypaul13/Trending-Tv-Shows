@@ -11,6 +11,7 @@ class TitleLabel: UILabel {
 
     override init (frame:CGRect){
         super.init(frame: frame)
+        set()
     }
     
     required init?(coder: NSCoder) {
@@ -24,7 +25,7 @@ class TitleLabel: UILabel {
         
     }
     
-    private func configure(){
+    private func set(){
         textColor = .label
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.75

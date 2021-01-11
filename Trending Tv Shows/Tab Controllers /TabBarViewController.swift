@@ -15,7 +15,6 @@ class TabBarViewController: UITabBarController {
         viewControllers                 = [createShowcontroller(), createFavoritecontroller()]
     }
     
-
     func createShowcontroller()->UINavigationController{
         let todayController = WeeklyViewController()
         todayController.title = "Today"
