@@ -23,8 +23,8 @@ class TvCellCollectionViewCell: UICollectionViewCell {
     }
     
     func setCell(shows:Shows){
-        tvImage.downloadAvatarImage(shows.poster_path)
-        tvName.text = shows.original_name
+        tvImage.downloadAvatarImage(shows.posterPath)
+        tvName.text = shows.originalName
     }
     
     private func set() {

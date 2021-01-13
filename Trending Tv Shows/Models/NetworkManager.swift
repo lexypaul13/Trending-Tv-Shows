@@ -8,16 +8,17 @@
 import UIKit
 
 class NetworkManger {
-    static let shared = NetworkManger()
+    
+     static let shared = NetworkManger()
      let baseURL = "https://api.themoviedb.org/3/trending/tv/week?api_key=352b794e6bc3be2fe8b0b6b3d7221ac1"
-     let cache   = NSCache<NSString, UIImage>() //creates cache to store image
+     let cache   = NSCache<NSString, UIImage>()
 
     private init (){}
 
     
     func getShows(page: Int, completed:@escaping(Result<[Shows],ErroMessage>)->Void){
         
-        let endpoint = baseURL + "language=en-US&page=\(page)"
+        let endpoint = baseURL + "&language=en-US&page=\(page)"
         guard let url = URL(string: endpoint) else{
             completed(.failure(.invalidTvName))
             return
@@ -39,9 +40,12 @@ class NetworkManger {
             }
             do{
                 let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let show = try decoder.decode([Shows].self, from: data)
-                completed(.success(show))
+                let apiResponse = try decoder.decode(ApiResponse.self, from: data)
+                DispatchQueue.main.async {
+                    completed(.success(apiResponse.shows))
+                }
+                
+                
             } catch{
                 completed(.failure(.invalidData))
             }
@@ -82,3 +86,5 @@ class NetworkManger {
     }
     
 }
+
+

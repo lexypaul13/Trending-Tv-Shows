@@ -7,7 +7,23 @@
 
 import Foundation
 
-struct Shows: Codable,Hashable {
-    var original_name: String
-    var poster_path: String
+struct Shows: Codable, Hashable {
+    var originalName: String
+    var posterPath: String
+    
+    enum CodingKeys:String, CodingKey {
+        case originalName = "original_name"
+        case posterPath = "poster_path"
+    }
+}
+
+
+struct ApiResponse:Codable {
+    let page:Int
+    let shows:[Shows]
+    
+    enum CodingKeys:String, CodingKey {
+        case page = "page"
+        case shows = "results"
+    }
 }

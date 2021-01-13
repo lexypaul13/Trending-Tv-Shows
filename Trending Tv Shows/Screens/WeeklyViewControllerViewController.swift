@@ -16,8 +16,8 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate, UISearchResul
     }
     
     var collectionView :UICollectionView!
-    var dataSource: UICollectionViewDiffableDataSource<Section,Shows>!
     var shows : [Shows] = []
+    var dataSource: UICollectionViewDiffableDataSource<Section,Shows>!
     var filteredShows : [Shows] = []
     var page = 1
     var isSearching = false
@@ -82,7 +82,6 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate, UISearchResul
         NetworkManger.shared.getShows(page: page) { [weak self] result in
             guard let self = self else { return }
             self.dismissLoadingView()
-            
             switch result{
             case .success(let shows):
                 self.updateUI(shows)
