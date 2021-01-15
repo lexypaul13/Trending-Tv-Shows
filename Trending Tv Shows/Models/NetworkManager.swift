@@ -12,7 +12,7 @@ class NetworkManger {
      static let shared = NetworkManger()
      let baseURL = "https://api.themoviedb.org/3/trending/tv/week?api_key=352b794e6bc3be2fe8b0b6b3d7221ac1"
      let cache   = NSCache<NSString, UIImage>()
-
+    
     private init (){}
 
     
@@ -56,16 +56,19 @@ class NetworkManger {
     
     func downloadImage(from urlString: String, completed: @escaping (UIImage?) -> Void) {  //downloads image
         let cacheKey = NSString(string: urlString) //creates cacheKey to store in image variable
+       
+        let imagesBaseURLSTring = "https://image.tmdb.org/t/p/w500"
+        guard let url = URL(string: imagesBaseURLSTring)?.appendingPathComponent(urlString)else {
+            completed(nil)
+            return
+        }
         
         if let image = cache.object(forKey: cacheKey) {  //check if image is there
             completed(image)
             return
         }
         
-        guard let url = URL(string: urlString) else {
-            completed(nil)
-            return
-        }
+       
         
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
             

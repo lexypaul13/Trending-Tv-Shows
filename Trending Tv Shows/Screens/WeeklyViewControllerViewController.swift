@@ -25,6 +25,7 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate, UISearchResul
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureSearch()
         configureViewcontroller()
         configureCollectionView()
         getTvshows(page:page)
@@ -40,18 +41,11 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate, UISearchResul
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createThreeColumnFlowLayout())
         view.addSubview(collectionView)
         collectionView.delegate = self
-        collectionView.backgroundColor = .systemGray
+        collectionView.backgroundColor = .white
         collectionView.register(TvCellCollectionViewCell.self, forCellWithReuseIdentifier: TvCellCollectionViewCell.reuseID)
     }
     
-    func configureDataSource(){
-        dataSource = UICollectionViewDiffableDataSource<Section, Shows>(collectionView: collectionView, cellProvider: {
-            (collectionView, indexPath, shows) -> UICollectionViewCell? in
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvCellCollectionViewCell.reuseID, for: indexPath) as! TvCellCollectionViewCell
-            cell.setCell(shows: shows)
-            return cell
-        })
-    }
+  
     
     
     func createThreeColumnFlowLayout()->UICollectionViewFlowLayout{
@@ -106,11 +100,21 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate, UISearchResul
         
     }
     
+    func configureDataSource(){
+        dataSource = UICollectionViewDiffableDataSource<Section, Shows>(collectionView: collectionView, cellProvider: {
+            (collectionView, indexPath, shows) -> UICollectionViewCell? in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvCellCollectionViewCell.reuseID, for: indexPath) as! TvCellCollectionViewCell
+            cell.setCell(shows: shows)
+            return cell
+        })
+    }
+    
     func updateData(shows:[Shows]){ //shows follwers
         var snapshot = NSDiffableDataSourceSnapshot<Section,Shows>()
         snapshot.appendSections([.main])
         snapshot.appendItems(shows)
         DispatchQueue.main.async {
+            self.configureDataSource()
             self.dataSource.apply(snapshot,animatingDifferences: true)
         }
     }

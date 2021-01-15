@@ -9,7 +9,7 @@ import UIKit
 
 class TvCellCollectionViewCell: UICollectionViewCell {
   
-    static let reuseID = "FollowerCell"
+    static let reuseID = "Tvcell"
     let tvImage = TvImage(frame: .zero)
     let tvName = TitleLabel(textAlignment: .center, fontSize: 15)
     
@@ -23,7 +23,7 @@ class TvCellCollectionViewCell: UICollectionViewCell {
     }
     
     func setCell(shows:Shows){
-        tvImage.downloadAvatarImage(shows.posterPath)
+        tvImage.downloadTVImage(shows.backdrop_path)
         tvName.text = shows.originalName
     }
     
@@ -34,8 +34,8 @@ class TvCellCollectionViewCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             tvImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
             tvImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
-            tvName.trailingAnchor.constraint(equalTo: contentView.rightAnchor, constant: -padding),
-            tvName.heightAnchor.constraint(equalTo: tvImage.widthAnchor),
+            tvImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
+            tvImage.heightAnchor.constraint(equalTo: tvImage.widthAnchor),
 
             tvName.topAnchor.constraint(equalTo: tvImage.bottomAnchor, constant: 12),
             tvName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
