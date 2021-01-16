@@ -21,7 +21,8 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate, UISearchResul
     var filteredShows : [Shows] = []
     var page = 1
     var isSearching = false
-    
+    var loadMoreMovies = true
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,12 +74,15 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate, UISearchResul
     
     func getTvshows(page:Int){
         showLoadingView()
+       
         NetworkManger.shared.getShows(page: page) { [weak self] result in
             guard let self = self else { return }
             self.dismissLoadingView()
             switch result{
             case .success(let shows):
+                if shows.count < 20 {self.loadMoreMovies = true}
                 self.updateUI(shows)
+          
             case .failure(let error):
                 DispatchQueue.main.async {
                     let alert = UIAlertController(title: "Check Internet Connection", message: error.rawValue,preferredStyle: UIAlertController.Style.alert)
@@ -99,16 +103,7 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate, UISearchResul
         self.updateData(shows: self.shows)
         
     }
-    
-    func configureDataSource(){
-        dataSource = UICollectionViewDiffableDataSource<Section, Shows>(collectionView: collectionView, cellProvider: {
-            (collectionView, indexPath, shows) -> UICollectionViewCell? in
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvCellCollectionViewCell.reuseID, for: indexPath) as! TvCellCollectionViewCell
-            cell.setCell(shows: shows)
-            return cell
-        })
-    }
-    
+
     func updateData(shows:[Shows]){ //shows follwers
         var snapshot = NSDiffableDataSourceSnapshot<Section,Shows>()
         snapshot.appendSections([.main])
@@ -119,6 +114,17 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate, UISearchResul
         }
     }
     
+    func configureDataSource(){
+        dataSource = UICollectionViewDiffableDataSource<Section, Shows>(collectionView: collectionView, cellProvider: {
+            (collectionView, indexPath, shows) -> UICollectionViewCell? in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvCellCollectionViewCell.reuseID, for: indexPath) as! TvCellCollectionViewCell
+            cell.setCell(shows: shows)
+            return cell
+        })
+    }
+    
+    
+    
 }
 
 extension WeeklyViewController:UICollectionViewDelegate{
@@ -127,7 +133,8 @@ extension WeeklyViewController:UICollectionViewDelegate{
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         let height = scrollView.frame.size.height
-        if offsetY > contentHeight-height{ ///check to see if bottom of screen is reached
+        if offsetY > contentHeight-height{
+            guard loadMoreMovies else { return }
             page += 1 ///increments ppage number when screen reaches
             getTvshows(page: page)
         }
