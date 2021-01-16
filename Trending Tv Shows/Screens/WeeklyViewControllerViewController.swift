@@ -74,14 +74,16 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate, UISearchResul
     
     func getTvshows(page:Int){
         showLoadingView()
-       
         NetworkManger.shared.getShows(page: page) { [weak self] result in
             guard let self = self else { return }
             self.dismissLoadingView()
             switch result{
             case .success(let shows):
-                if shows.count < 20 {self.loadMoreMovies = true}
-                self.updateUI(shows)
+                if shows.count < 100 {
+                    self.shows.append(contentsOf: shows)
+                    self.updateData(shows: shows)
+
+                }
           
             case .failure(let error):
                 DispatchQueue.main.async {
@@ -94,7 +96,6 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate, UISearchResul
     }
     
     func updateUI(_ shows:[Shows]){
-        self.shows.append(contentsOf: shows)
         if self.shows.isEmpty{
             let alert = UIAlertController(title: "Tv Show Doesnt Exist", message: nil,preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
