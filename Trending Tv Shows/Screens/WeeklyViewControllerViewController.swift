@@ -7,9 +7,8 @@
 
 import UIKit
 
-class WeeklyViewController: UIViewController, UISearchBarDelegate, UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-    }
+class WeeklyViewController: UIViewController, UISearchBarDelegate {
+
     
     enum Section {
         case main
@@ -26,11 +25,12 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate, UISearchResul
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureSearch()
         configureViewcontroller()
         configureCollectionView()
+        configureSearch()
         getTvshows(page:page)
-        
+        configureDataSource()
+
     }
     
     func configureViewcontroller(){
@@ -44,9 +44,9 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate, UISearchResul
         collectionView.delegate = self
         collectionView.backgroundColor = .white
         collectionView.register(TvCellCollectionViewCell.self, forCellWithReuseIdentifier: TvCellCollectionViewCell.reuseID)
+        self.configureDataSource()
+
     }
-    
-  
     
     
     func createThreeColumnFlowLayout()->UICollectionViewFlowLayout{
@@ -79,12 +79,13 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate, UISearchResul
             self.dismissLoadingView()
             switch result{
             case .success(let shows):
-                if shows.count < 100 {
+                if page == 1 {
+                    self.shows = shows
+                }else{
                     self.shows.append(contentsOf: shows)
-                    self.updateData(shows: shows)
-
                 }
-          
+                
+                self.updateData(shows: self.shows)
             case .failure(let error):
                 DispatchQueue.main.async {
                     let alert = UIAlertController(title: "Check Internet Connection", message: error.rawValue,preferredStyle: UIAlertController.Style.alert)
@@ -110,7 +111,6 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate, UISearchResul
         snapshot.appendSections([.main])
         snapshot.appendItems(shows)
         DispatchQueue.main.async {
-            self.configureDataSource()
             self.dataSource.apply(snapshot,animatingDifferences: true)
         }
     }
@@ -123,11 +123,30 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate, UISearchResul
             return cell
         })
     }
-    
-    
-    
+
 }
 
+extension WeeklyViewController: UISearchResultsUpdating{
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let filter = searchController.searchBar.text, filter.isEmpty else {
+            shows.removeAll()
+            updateData(shows: shows)
+            isSearching = false
+            return
+        }
+        isSearching = true
+        filteredShows = shows.filter { $0.originalName.lowercased().contains(filter.lowercased()) }
+        updateData(shows: filteredShows)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        isSearching = false
+        updateData(shows: filteredShows)
+    }
+    
+  
+}
 extension WeeklyViewController:UICollectionViewDelegate{
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
@@ -141,4 +160,5 @@ extension WeeklyViewController:UICollectionViewDelegate{
         }
     }
 }
+
 
