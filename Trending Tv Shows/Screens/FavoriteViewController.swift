@@ -8,11 +8,11 @@
 import UIKit
 
 class FavoriteViewController: UIViewController{
-  
- 
+    var tv : String!
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewcontroller()
+        
     }
 
     func configureViewcontroller(){

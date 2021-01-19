@@ -24,7 +24,7 @@ class TvCellCollectionViewCell: UICollectionViewCell {
     
     func setCell(shows:Shows){
         tvImage.downloadTVImage(shows.backdrop_path)
-        tvName.text = shows.originalName
+        tvName.text = shows.name
     }
     
     private func set() {

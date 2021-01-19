@@ -4,7 +4,6 @@
 //
 //  Created by Alex Paul on 1/7/21.
 //
-
 import UIKit
 
 class NetworkManger {
@@ -41,6 +40,7 @@ class NetworkManger {
             do{
                 let decoder = JSONDecoder()
                 let apiResponse = try decoder.decode(ApiResponse.self, from: data)
+               
                 DispatchQueue.main.async {
                     completed(.success(apiResponse.shows))
                 }
@@ -52,6 +52,10 @@ class NetworkManger {
         }
         task.resume()
     }
+    
+    
+
+    
     
     
     func downloadImage(from urlString: String, completed: @escaping (UIImage?) -> Void) {  //downloads image

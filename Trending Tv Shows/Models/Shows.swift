@@ -8,12 +8,23 @@
 import Foundation
 
 struct Shows: Codable, Hashable {
-    var originalName: String
-    var backdrop_path: String
+  
+    let overview:String
+   let vote_count: String
+   let name: String
+   let backdrop_path: String
+   let vote_average :String
+   let first_air_date :String
+
     
     enum CodingKeys:String, CodingKey {
-        case originalName = "original_name"
+        case overview = "overview"
+        case vote_count = "vote_count"
+        case name = "name"
         case backdrop_path = "backdrop_path"
+        case vote_average = "vote_average"
+        case first_air_date = "first_air_date"
+
     }
 }
 
@@ -27,3 +38,4 @@ struct ApiResponse:Codable, Hashable {
         case shows = "results"
     }
 }
+

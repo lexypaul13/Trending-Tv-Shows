@@ -130,19 +130,19 @@ extension WeeklyViewController: UISearchResultsUpdating{
     
     func updateSearchResults(for searchController: UISearchController) {
         guard let filter = searchController.searchBar.text, filter.isEmpty else {
-            shows.removeAll()
+            filteredShows.removeAll()
             updateData(shows: shows)
             isSearching = false
             return
         }
         isSearching = true
-        filteredShows = shows.filter { $0.originalName.lowercased().contains(filter.lowercased()) }
-        updateData(shows: filteredShows)
+        filteredShows = shows.filter { $0.name.lowercased().contains(filter.lowercased()) }
+        updateData(shows: shows)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         isSearching = false
-        updateData(shows: filteredShows)
+        updateData(shows: shows)
     }
     
   
