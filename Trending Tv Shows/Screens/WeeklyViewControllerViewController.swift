@@ -8,20 +8,21 @@
 import UIKit
 
 class WeeklyViewController: UIViewController, UISearchBarDelegate {
-
+    
     
     enum Section {
         case main
     }
     
     var collectionView :UICollectionView!
-    var shows : [Shows] = []
-    var dataSource: UICollectionViewDiffableDataSource<Section,Shows>!
-    var filteredShows : [Shows] = []
+    var shows : [Show] = [] 
+    
+    var dataSource: UICollectionViewDiffableDataSource<Section,Show>!
+    var filteredShows : [Show] = []
     var page = 1
     var isSearching = false
     var loadMoreMovies = true
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,7 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate {
         configureSearch()
         getTvshows(page:page)
         configureDataSource()
-
+        
     }
     
     func configureViewcontroller(){
@@ -45,7 +46,7 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate {
         collectionView.backgroundColor = .white
         collectionView.register(TvCellCollectionViewCell.self, forCellWithReuseIdentifier: TvCellCollectionViewCell.reuseID)
         self.configureDataSource()
-
+        
     }
     
     
@@ -61,6 +62,13 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate {
         return flowLayout
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let showID = shows[indexPath.item].id else { return }
+        let detailsVC = TvShowDetailsViewController(showID: showID)
+        present(detailsVC, animated: true)
+    }
+    
+    
     
     func configureSearch(){
         let searchController = UISearchController()
@@ -74,29 +82,34 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate {
     
     func getTvshows(page:Int){
         showLoadingView()
-        NetworkManger.shared.getShows(page: page) { [weak self] result in
+        NetworkManger.shared.get(.showList, showID: nil, page: page, urlString: "") { [weak self] (response: ApiResponse? ) in
+            self?.dismissLoadingView()
             guard let self = self else { return }
-            self.dismissLoadingView()
-            switch result{
-            case .success(let shows):
+            guard let shows = response?.shows else {
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Check Internet Connection", message: ErroMessage.invalidData.rawValue,preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    
+                }
+                
+                return
+            }
+            DispatchQueue.main.async {
                 if page == 1 {
                     self.shows = shows
                 }else{
                     self.shows.append(contentsOf: shows)
                 }
-                
                 self.updateData(shows: self.shows)
-            case .failure(let error):
-                DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "Check Internet Connection", message: error.rawValue,preferredStyle: UIAlertController.Style.alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                }
+                
             }
+            
         }
+        
     }
     
-    func updateUI(_ shows:[Shows]){
+    func updateUI(_ shows:[Show]){
         if self.shows.isEmpty{
             let alert = UIAlertController(title: "Tv Show Doesnt Exist", message: nil,preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
@@ -105,9 +118,9 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate {
         self.updateData(shows: self.shows)
         
     }
-
-    func updateData(shows:[Shows]){ //shows follwers
-        var snapshot = NSDiffableDataSourceSnapshot<Section,Shows>()
+    
+    func updateData(shows:[Show]){ //shows follwers
+        var snapshot = NSDiffableDataSourceSnapshot<Section,Show>()
         snapshot.appendSections([.main])
         snapshot.appendItems(shows)
         DispatchQueue.main.async {
@@ -116,14 +129,14 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate {
     }
     
     func configureDataSource(){
-        dataSource = UICollectionViewDiffableDataSource<Section, Shows>(collectionView: collectionView, cellProvider: {
-            (collectionView, indexPath, shows) -> UICollectionViewCell? in
+        dataSource = UICollectionViewDiffableDataSource<Section, Show>(collectionView: collectionView, cellProvider: {
+            (collectionView, indexPath, show) -> UICollectionViewCell? in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TvCellCollectionViewCell.reuseID, for: indexPath) as! TvCellCollectionViewCell
-            cell.setCell(shows: shows)
+            cell.setCell(show: show)
             return cell
         })
     }
-
+    
 }
 
 extension WeeklyViewController: UISearchResultsUpdating{
@@ -136,7 +149,7 @@ extension WeeklyViewController: UISearchResultsUpdating{
             return
         }
         isSearching = true
-        filteredShows = shows.filter { $0.name.lowercased().contains(filter.lowercased()) }
+        filteredShows = shows.filter { $0.unwrappedName.lowercased().contains(filter.lowercased()) }
         updateData(shows: shows)
     }
     
@@ -145,7 +158,7 @@ extension WeeklyViewController: UISearchResultsUpdating{
         updateData(shows: shows)
     }
     
-  
+    
 }
 extension WeeklyViewController:UICollectionViewDelegate{
     

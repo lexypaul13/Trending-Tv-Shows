@@ -22,9 +22,14 @@ class TvCellCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setCell(shows:Shows){
-        tvImage.downloadTVImage(shows.backdrop_path)
-        tvName.text = shows.name
+    func setCell(show:Show){
+        
+        if let path = show.backdropPath  {
+         tvImage.downloadTVImage(path)
+         } else {
+             print("No Backdrop path")
+        }
+        tvName.text = show.name
     }
     
     private func set() {
