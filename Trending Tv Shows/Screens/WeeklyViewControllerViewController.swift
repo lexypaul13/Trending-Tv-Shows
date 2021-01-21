@@ -64,7 +64,7 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let showID = shows[indexPath.item].id else { return }
-        let detailsVC = TvShowDetailsViewController(showID: showID)
+        let detailsVC = TVDetailsViewController(showID: showID)
         present(detailsVC, animated: true)
     }
     

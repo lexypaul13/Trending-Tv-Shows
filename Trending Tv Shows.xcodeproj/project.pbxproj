@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		572325E025B92F5400E284C9 /* TVInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572325DF25B92F5400E284C9 /* TVInfoViewController.swift */; };
+		572325EB25B93D1000E284C9 /* TvInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572325EA25B93D1000E284C9 /* TvInfoViewController.swift */; };
 		5730E32E25A6BFD200BD7D91 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E32D25A6BFD200BD7D91 /* TabBarViewController.swift */; };
 		5730E33325A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E33225A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift */; };
 		5730E34325A6C6ED00BD7D91 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E34225A6C6ED00BD7D91 /* Show.swift */; };
@@ -48,7 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		572325DF25B92F5400E284C9 /* TVInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVInfoViewController.swift; sourceTree = "<group>"; };
+		572325EA25B93D1000E284C9 /* TvInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvInfoViewController.swift; sourceTree = "<group>"; };
 		5730E32D25A6BFD200BD7D91 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		5730E33225A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyViewControllerViewController.swift; sourceTree = "<group>"; };
 		5730E34225A6C6ED00BD7D91 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
@@ -114,8 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				5730E33225A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift */,
+				572325EA25B93D1000E284C9 /* TvInfoViewController.swift */,
 				575D448425B4F2350034D238 /* TVDetailsViewController.swift */,
-				572325DF25B92F5400E284C9 /* TVInfoViewController.swift */,
 				57E3B75625A563BB00C98BF6 /* FavoriteViewController.swift */,
 			);
 			path = Screens;
@@ -375,8 +375,8 @@
 				5730E34325A6C6ED00BD7D91 /* Show.swift in Sources */,
 				57A730A425AC725C0091ED84 /* AnimationViewController.swift in Sources */,
 				5760A60925A97D0C0011CF3B /* SecondaryLabel.swift in Sources */,
-				572325E025B92F5400E284C9 /* TVInfoViewController.swift in Sources */,
 				57E3B75525A563BB00C98BF6 /* SceneDelegate.swift in Sources */,
+				572325EB25B93D1000E284C9 /* TvInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
