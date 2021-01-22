@@ -16,7 +16,7 @@ class Details_ViewController: UIViewController {
     var scoreLabel = SecondaryLabel(fontSize: 10)
     var bodyLabel = BodyLabel(textAlignment: .center)
     var showID:Int
-    var show: Show
+    var show: Show?
     
     init(showID: Int) {
         self.showID = showID
@@ -49,15 +49,15 @@ class Details_ViewController: UIViewController {
     
     
     func configureUIElements(){
-       if let path = show.backdropPath  {
+        if let path = show?.backdropPath  {
         tvImage.downloadTVImage(path)
         } else {
             print("No Backdrop path")
        }
-        titleLabel.text = show.name
-        dateLabel.text = show.firstAirDate
-        scoreLabel.text = show.voteAverageStr
-        bodyLabel.text = show.overview
+        titleLabel.text = show?.name
+        dateLabel.text = show?.firstAirDate
+        scoreLabel.text = show?.voteAverageStr
+        bodyLabel.text = show?.overview
     }
     
     func addSubView(){
