@@ -125,6 +125,7 @@
 		5730E35425A6D77000BD7D91 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				573EC70425BA7F08003477E1 /* SaveManager .swift */,
 				5730E34725A6CEC900BD7D91 /* NetworkManager.swift */,
 				5730E34C25A6CF0800BD7D91 /* ErrorMessage.swift */,
 				5730E34225A6C6ED00BD7D91 /* Show.swift */,
@@ -155,7 +156,6 @@
 			children = (
 				57EB3D4725AAB91000265DCF /* TvCellCollectionViewCell.swift */,
 				573EC6FF25BA7C3E003477E1 /* TvTableViewCell.swift */,
-				573EC70425BA7F08003477E1 /* SaveManager .swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";

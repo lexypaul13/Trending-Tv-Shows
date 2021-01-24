@@ -35,6 +35,8 @@ class TvCellCollectionViewCell: UICollectionViewCell {
     private func set() {
         addSubview(tvImage)
         addSubview(tvName)
+        tvImage.translatesAutoresizingMaskIntoConstraints = false
+        tvName.translatesAutoresizingMaskIntoConstraints = false
         let padding : CGFloat = 8
         NSLayoutConstraint.activate([
             tvImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),

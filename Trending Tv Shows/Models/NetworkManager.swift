@@ -37,28 +37,28 @@ class NetworkManger {
         
         guard let url = urlBuilder(endPoint: endPoints, showID: showID, page: page) else {
             print(ErroMessage.invalidURL.rawValue)
-//            completed(.failure(.invalidURL))
+            //            completed(.failure(.invalidURL))
             completed(nil)
             return
         }
         
-
+        
         let task = URLSession.shared.dataTask(with: url){ data, response, error in
             if let _ = error {
-//                completed(.failure(.unableToComplete))
+                //                completed(.failure(.unableToComplete))
                 print(ErroMessage.unableToComplete.rawValue)
                 completed(nil)
                 return
             }
             
             guard let response = response as? HTTPURLResponse, response.statusCode==200 else {
-//                completed(.failure(.invalidResponse))
+                //                completed(.failure(.invalidResponse))
                 print(ErroMessage.invalidResponse.rawValue)
                 return
             }
             
             guard let data = data else{
-//                completed(.failure(.invalidData))
+                //                completed(.failure(.invalidData))
                 print(ErroMessage.invalidData.rawValue)
                 return
             }
@@ -67,13 +67,13 @@ class NetworkManger {
                 let apiResponse = try self.jsonDecoder.decode(T.self, from: data)
                 
                 DispatchQueue.main.async {
-//                    completed(.success(apiResponse))
+                    //                    completed(.success(apiResponse))
                     completed(apiResponse)
                 }
                 
                 
             } catch{
-//                completed(.failure(.invalidData))
+                //                completed(.failure(.invalidData))
                 print(ErroMessage.invalidData.rawValue)
             }
         }
@@ -128,22 +128,6 @@ class NetworkManger {
         
         
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
 }

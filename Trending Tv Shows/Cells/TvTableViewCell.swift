@@ -36,9 +36,9 @@ class TvTableViewCell: UITableViewCell {
         addSubview(tvImage)
         addSubview(tvName)
         
-        accessoryType           = .disclosureIndicator
-        let padding: CGFloat    = 12
-        
+
+        let padding: CGFloat    = 89
+
         NSLayoutConstraint.activate([
             tvImage.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             tvImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: padding),

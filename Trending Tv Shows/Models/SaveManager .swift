@@ -14,10 +14,41 @@ enum SaveActionType {
 
 enum SaveManger{
     static private let defaults = UserDefaults.standard
-   
+    
     enum Keys{
         static let favorites = "favorites"
     }
+    
+    static func updateWith(favorite: Show, actionType: SaveActionType, completed: @escaping (ErroMessage?) -> Void) {
+        collectFavorties { result in
+            
+            switch result {
+            case .success(let favorites):
+                var retrievedFavorites = favorites
+                
+                switch actionType {
+                case .add:
+                    guard !retrievedFavorites.contains(favorite) else {
+                        completed(.duplicateShow)
+                        return
+                    }
+                    
+                    retrievedFavorites.append(favorite)
+                    
+                    
+                case .remove:
+                    retrievedFavorites.removeAll { $0.name == favorite.name } ///deletes user
+                }
+                
+                completed(save(favorites: retrievedFavorites))
+                
+            case .failure(let error):
+                completed(error)
+            }
+        }
+    }
+    
+    
     
     static func collectFavorties(completed:@escaping(Result<[Show], ErroMessage>)->Void){
         guard let favoriteData = defaults.object(forKey: Keys.favorites) as? Data else {
@@ -34,6 +65,7 @@ enum SaveManger{
         
     }
     
+    
     static func save (favorites: [Show])->ErroMessage?{
         do {
             let encoder = JSONEncoder()
@@ -42,7 +74,7 @@ enum SaveManger{
             return nil
         }
         catch {
-            return.unableToComplete
+            return .saveFailure
         }
     }
     

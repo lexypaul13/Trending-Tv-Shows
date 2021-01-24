@@ -22,6 +22,7 @@ class BodyLabel: UILabel {
     convenience init(textAlignment:NSTextAlignment) {
         self.init(frame:.zero)
         self.textAlignment = textAlignment
+        
     }
     
     private func set () {
@@ -31,7 +32,7 @@ class BodyLabel: UILabel {
         minimumScaleFactor = 0.75
         lineBreakMode = .byWordWrapping
         translatesAutoresizingMaskIntoConstraints = false
-        
+        numberOfLines = 0
     }
     
 }
