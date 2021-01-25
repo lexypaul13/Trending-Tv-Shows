@@ -11,7 +11,7 @@ class TvCellCollectionViewCell: UICollectionViewCell {
   
     static let reuseID = "Tvcell"
     let tvImage = TvImage(frame: .zero)
-    let tvName = TitleLabel(textAlignment: .center, fontSize: 15)
+    let tvName = TitleLabel(textAlignment: .center, fontSize: 20 )
     
     override init (frame:CGRect){
         super.init(frame: frame)
@@ -24,11 +24,8 @@ class TvCellCollectionViewCell: UICollectionViewCell {
     
     func setCell(show:Show){
         
-        if let path = show.backdropPath  {
-         tvImage.downloadTVImage(path)
-         } else {
-             print("No Backdrop path")
-        }
+        if let path = show.backdropPath{tvImage.downloadTVImage(path)}
+        
         tvName.text = show.name
     }
     
@@ -47,8 +44,5 @@ class TvCellCollectionViewCell: UICollectionViewCell {
             tvName.topAnchor.constraint(equalTo: tvImage.bottomAnchor, constant: 12),
             tvName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
             tvName.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
-            tvName.heightAnchor.constraint(equalToConstant: 20)  ])
-        
-    }
-    
+])       }
 }

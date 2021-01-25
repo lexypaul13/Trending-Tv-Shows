@@ -8,8 +8,8 @@
 import UIKit
 
 class TvTableViewCell: UITableViewCell {
- static let resuseID = "FavoriteCell"
     
+    static let resuseID = "FavoriteCell"
     let tvImage = TvImage(frame: .zero)
     let tvName = TitleLabel(textAlignment: .left, fontSize: 23)
     
@@ -36,20 +36,20 @@ class TvTableViewCell: UITableViewCell {
         addSubview(tvImage)
         addSubview(tvName)
         
-
-        let padding: CGFloat    = 89
+        tvImage.translatesAutoresizingMaskIntoConstraints = false
+        tvName.translatesAutoresizingMaskIntoConstraints = false
+        let padding: CGFloat    = 12
 
         NSLayoutConstraint.activate([
-            tvImage.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            tvImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: padding),
+            tvImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            tvImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
             tvImage.heightAnchor.constraint(equalToConstant: 60),
             tvImage.widthAnchor.constraint(equalToConstant: 60),
             
             tvName.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             tvName.leadingAnchor.constraint(equalTo: tvImage.trailingAnchor, constant: 24),
             tvImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -padding),
-            tvImage.heightAnchor.constraint(equalToConstant: 40)
-        ])
+            tvImage.heightAnchor.constraint(equalToConstant: 40)])
     }
    
 

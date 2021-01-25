@@ -27,7 +27,6 @@ class SecondaryLabel: UILabel {
     private func set(){
         textColor = .secondaryLabel
         adjustsFontSizeToFitWidth = false
-        minimumScaleFactor = 0.80
         lineBreakMode = .byTruncatingTail
         translatesAutoresizingMaskIntoConstraints = false
     }

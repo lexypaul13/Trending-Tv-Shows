@@ -12,8 +12,8 @@ class Details_ViewController: UIViewController {
     
     var tvImage = TvImage(frame: .zero)
     var titleLabel = TitleLabel(textAlignment: .left, fontSize: 34)
-    var dateLabel = SecondaryLabel(fontSize: 10)
-    var scoreLabel = SecondaryLabel(fontSize: 10)
+    var dateLabel = SecondaryLabel(fontSize: 20)
+    var scoreLabel = SecondaryLabel(fontSize: 20)
     var bodyLabel = BodyLabel(textAlignment: .left)
     var showID:Int
     var show: Show?
@@ -40,16 +40,11 @@ class Details_ViewController: UIViewController {
     
     func configureViewController (){
         view.backgroundColor = .systemBackground
-        let done = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismssVC))
-        
         let add  = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButton))
-        navigationItem.rightBarButtonItem = done
-        navigationItem.leftBarButtonItem = add
+        navigationItem.rightBarButtonItem = add
     }
     
-    @objc func dismssVC() {
-        dismiss(animated: true)
-    }
+   
     
     @objc func addButton(){
         NetworkManger.shared.get(.showDetail, showID: showID, page: nil, urlString: "")
@@ -67,7 +62,7 @@ class Details_ViewController: UIViewController {
     }
     
     func addShowsToFavorites(show:Show){
-        let show = Show(id: show.id, overview: show.overview, voteCount: nil, name: nil, backdropPath: nil, voteAverage: nil, firstAirDate: nil)
+        let show = Show(id: show.id, overview: show.overview, voteCount: show.voteCount, name: show.name, backdropPath: show.backdropPath, voteAverage: show.voteAverage, firstAirDate: show.firstAirDate)
         
         SaveManger.updateWith(favorite: show, actionType: .add){ error in
             guard let error = error else{
@@ -89,7 +84,13 @@ class Details_ViewController: UIViewController {
         titleLabel.text = show?.name
         dateLabel.text = show?.firstAirDate
         scoreLabel.text = show?.voteAverageStr
-        bodyLabel.text = show?.overview
+        
+        if let text = show?.overview {
+            bodyLabel.text = text
+        }
+        else{
+            bodyLabel.text = "No Description"
+        }
     }
     
     func addSubView(){
@@ -118,24 +119,24 @@ class Details_ViewController: UIViewController {
             tvImage.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor,constant: 25),
             
             titleLabel.topAnchor.constraint(equalTo: tvImage.topAnchor, constant: 20),
-            titleLabel.leadingAnchor.constraint(equalTo: tvImage.trailingAnchor, constant: textImagePadding),
+            titleLabel.leadingAnchor.constraint(equalTo: tvImage.trailingAnchor, constant: 12),
             titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             titleLabel.heightAnchor.constraint(equalToConstant: 38),
             
             
-            dateLabel.centerYAnchor.constraint(equalTo: tvImage.centerYAnchor, constant: 5),
+            dateLabel.centerYAnchor.constraint(equalTo: tvImage.centerYAnchor, constant: 12),
             dateLabel.leadingAnchor.constraint(equalTo: tvImage.trailingAnchor, constant: textImagePadding),
             dateLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             dateLabel.heightAnchor.constraint(equalToConstant: 90),
             
             scoreLabel.topAnchor.constraint(equalTo: tvImage.topAnchor, constant: 90),
             scoreLabel.leadingAnchor.constraint(equalTo: tvImage.trailingAnchor, constant: textImagePadding),
-            scoreLabel.widthAnchor.constraint(equalToConstant: 20),
-            scoreLabel.heightAnchor.constraint(equalToConstant: 20),
+            scoreLabel.widthAnchor.constraint(equalToConstant: 50),
+            scoreLabel.heightAnchor.constraint(equalToConstant: 50),
             
             bodyLabel.topAnchor.constraint(equalTo: tvImage.bottomAnchor, constant: textImagePadding),
             bodyLabel.leadingAnchor.constraint(equalTo: tvImage.leadingAnchor),
-            bodyLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: 15),
+            bodyLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -15),
         ])
     }
     

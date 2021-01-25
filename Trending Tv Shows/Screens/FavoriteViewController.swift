@@ -17,6 +17,7 @@ class FavoriteViewController: UIViewController{
         super.viewDidLoad()
         configureViewcontroller()
         setTableview()
+
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -50,7 +51,7 @@ class FavoriteViewController: UIViewController{
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
-
+                
             case .failure( _):
                 DispatchQueue.main.async {
                     let alert = UIAlertController(title: "Cannot", message: ErroMessage.saveFailure.rawValue,preferredStyle: UIAlertController.Style.alert)
@@ -73,6 +74,10 @@ extension FavoriteViewController: UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return favoriteShows.count
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 163
+    }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TvTableViewCell.resuseID) as! TvTableViewCell
@@ -87,5 +92,16 @@ extension FavoriteViewController: UITableViewDataSource,UITableViewDelegate{
         navigationController?.pushViewController(destVC, animated: true)
     }
     
-
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else {return}
+        let favorite = favoriteShows[indexPath.row]
+        favoriteShows.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .left)
+        SaveManger.updateWith(favorite: favorite, actionType: .remove) { [weak self] error in
+            guard let self = self else { return }
+            guard let error = error else { return }
+            
+        }
+        
+    }
 }
