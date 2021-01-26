@@ -3,4 +3,54 @@
    uuid = "1AC50E79-E518-45A3-B4B2-5D498A7D822D"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "156C0170-7D19-4183-A2BB-BB4B89225012"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Trending Tv Shows/Screens/WeeklyViewControllerViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "updateSearchResults(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "156C0170-7D19-4183-A2BB-BB4B89225012 - 79c8080c0b26c783"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Trending_Tv_Shows.WeeklyViewController.updateSearchResults(for: __C.UISearchController) -&gt; ()"
+                  moduleName = "Trending Tv Shows"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexpaul/Desktop/IOSProjects/Trending%20Tv%20Shows/Trending%20Tv%20Shows/Screens/WeeklyViewControllerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "438">
+               </Location>
+               <Location
+                  uuid = "156C0170-7D19-4183-A2BB-BB4B89225012 - 32f160b39de34d4b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Trending_Tv_Shows.Show) -&gt; Swift.Bool in Trending_Tv_Shows.WeeklyViewController.updateSearchResults(for: __C.UISearchController) -&gt; ()"
+                  moduleName = "Trending Tv Shows"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexpaul/Desktop/IOSProjects/Trending%20Tv%20Shows/Trending%20Tv%20Shows/Screens/WeeklyViewControllerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

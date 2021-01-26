@@ -33,24 +33,29 @@ class TvTableViewCell: UITableViewCell {
     
     
     private func set() {
-        addSubview(tvImage)
-        addSubview(tvName)
+        self.contentView.addSubview(tvImage)
+        contentView.addSubview(tvName)
         
         tvImage.translatesAutoresizingMaskIntoConstraints = false
         tvName.translatesAutoresizingMaskIntoConstraints = false
         let padding: CGFloat    = 12
 
         NSLayoutConstraint.activate([
-            tvImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            tvImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
-            tvImage.heightAnchor.constraint(equalToConstant: 60),
-            tvImage.widthAnchor.constraint(equalToConstant: 60),
-            
-            tvName.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            tvName.leadingAnchor.constraint(equalTo: tvImage.trailingAnchor, constant: 24),
-            tvImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -padding),
-            tvImage.heightAnchor.constraint(equalToConstant: 40)])
-    }
-   
+                tvImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+                tvImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
+                tvImage.heightAnchor.constraint(equalToConstant: 60),
+                tvImage.widthAnchor.constraint(equalToConstant: 60),
 
+                // constrain to contentView, not self!
+                //tvName.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+                tvName.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+                tvName.leadingAnchor.constraint(equalTo: tvImage.trailingAnchor, constant: 24),
+                
+                // these two lines should be tvName, not tvImage!
+                //tvImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -padding),
+                //tvImage.heightAnchor.constraint(equalToConstant: 40)
+                tvName.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
+                tvName.heightAnchor.constraint(equalToConstant: 40)
+            ])
+      }
 }

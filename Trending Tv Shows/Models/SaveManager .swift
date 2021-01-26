@@ -78,12 +78,4 @@ enum SaveManger{
         }
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
 }

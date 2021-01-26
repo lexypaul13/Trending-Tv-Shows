@@ -63,7 +63,8 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let showID = shows[indexPath.item].id else { return }
+        let activeArray     = isSearching ? filteredShows : shows
+        guard let showID = activeArray[indexPath.item].id else { return }
         let detailsVC = Details_ViewController(showID: showID)
         let navController   = UINavigationController(rootViewController: detailsVC)
         present(navController, animated: true)
@@ -88,7 +89,7 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate {
             guard let self = self else { return }
             guard let shows = response?.shows else {
                 DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "Check Internet Connection", message: ErroMessage.invalidData.rawValue,preferredStyle: UIAlertController.Style.alert)
+                    let alert = UIAlertController(title: "Check Internet Connection", message: ErroMessage.unableToComplete.rawValue,preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                     
@@ -144,19 +145,19 @@ extension WeeklyViewController: UISearchResultsUpdating{
     
     func updateSearchResults(for searchController: UISearchController) {
         guard let filter = searchController.searchBar.text, filter.isEmpty else {
-            filteredShows.removeAll()
-            updateData(shows: shows)
-            isSearching = false
+//            filteredShows.removeAll()
+//            updateData(shows: shows)
+//            isSearching = false
             return
         }
         isSearching = true
-        filteredShows = shows.filter { $0.unwrappedName.lowercased().contains(filter.lowercased()) }
-        updateData(shows: shows)
+        filteredShows = shows.filter { ($0.unwrappedName.lowercased().contains(filter.lowercased())) }
+        updateData(shows: filteredShows)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         isSearching = false
-        updateData(shows: shows)
+        updateData(shows: filteredShows)
     }
     
     

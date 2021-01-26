@@ -43,6 +43,7 @@ class TvCellCollectionViewCell: UICollectionViewCell {
 
             tvName.topAnchor.constraint(equalTo: tvImage.bottomAnchor, constant: 12),
             tvName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
-            tvName.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
-])       }
+            tvName.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),])
+        
+    }
 }

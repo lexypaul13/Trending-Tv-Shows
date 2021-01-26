@@ -36,9 +36,8 @@ class NetworkManger {
     func get<T:Decodable>(_ endPoints: EndPoint, showID: Int? = nil, page: Int? = nil, urlString: String, completed:@escaping(T?)->Void){
         
         guard let url = urlBuilder(endPoint: endPoints, showID: showID, page: page) else {
-            print(ErroMessage.invalidURL.rawValue)
-            //            completed(.failure(.invalidURL))
-            completed(nil)
+           // print(ErroMessage.invalidURL.rawValue)
+            completed(ErroMessage.invalidURL.rawValue as? T)
             return
         }
         
@@ -119,7 +118,7 @@ class NetworkManger {
         switch endPoint {
         
         case .showList:
-            return URL(string: baseURL + "trending/tv/week" + apiKeyPathCompononent + "&page=\(page ?? 1)" + languageParam)
+            return URL(string: baseURL + "trending/tv/day" + apiKeyPathCompononent + "&page=\(page ?? 1)" + languageParam)
             
         case .showDetail:
             guard let id = showID else { return nil }
