@@ -8,7 +8,6 @@
 import UIKit
 
 class TvImage: UIImageView {
-
     
     override init (frame:CGRect){
         super.init(frame: frame)
@@ -20,7 +19,6 @@ class TvImage: UIImageView {
     }
     
     private func set(){
-        layer.cornerRadius = 30
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
         contentMode = .scaleAspectFill

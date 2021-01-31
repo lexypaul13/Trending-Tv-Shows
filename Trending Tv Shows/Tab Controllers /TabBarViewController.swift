@@ -17,7 +17,7 @@ class TabBarViewController: UITabBarController {
     
     func createShowcontroller()->UINavigationController{
         let todayController = WeeklyViewController()
-        todayController.title = "Today"
+        todayController.title = "This Week"
         todayController.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
         return UINavigationController(rootViewController: todayController)
     }

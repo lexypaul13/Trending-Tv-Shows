@@ -17,20 +17,17 @@ class FavoriteViewController: UIViewController{
         super.viewDidLoad()
         configureViewcontroller()
         setTableview()
-
-        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getFavoriteShow()
     }
+    
     func configureViewcontroller(){
         view.backgroundColor = .systemGray
-        title = "Saved Tv Shows"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        
+        title = "Saved Tv Shows"        
     }
-    
     
     func setTableview(){
         view.addSubview(tableView)
@@ -39,7 +36,6 @@ class FavoriteViewController: UIViewController{
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(TvTableViewCell.self, forCellReuseIdentifier: TvTableViewCell.resuseID)
-        
     }
     
     func getFavoriteShow(){
@@ -48,16 +44,12 @@ class FavoriteViewController: UIViewController{
             switch result{
             case .success(let favorites):
                 self.favoriteShows = favorites
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-                
+                DispatchQueue.main.async {self.tableView.reloadData()}
             case .failure( _):
                 DispatchQueue.main.async {
                     let alert = UIAlertController(title: "Cannot", message: ErroMessage.saveFailure.rawValue,preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
-                    
                 }
                 
             }
@@ -96,8 +88,8 @@ extension FavoriteViewController: UITableViewDataSource,UITableViewDelegate{
         favoriteShows.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .left)
         SaveManger.updateWith(favorite: favorite, actionType: .remove) { [weak self] error in
-            guard let self = self else { return }
-            guard let error = error else { return }
+            guard self != nil else { return }
+            guard error != nil else { return }
             
         }
         

@@ -11,13 +11,14 @@ class Details_ViewController: UIViewController {
     
     
     var tvImage = TvImage(frame: .zero)
-    var titleLabel = TitleLabel(textAlignment: .left, fontSize: 34)
+    var titleLabel = SecondaryLabel(fontSize: 25)
     var dateLabel = SecondaryLabel(fontSize: 20)
     var scoreLabel = SecondaryLabel(fontSize: 20)
     var bodyLabel = BodyLabel(textAlignment: .left)
     var showID:Int
     var show: Show?
-    
+    var loadMoreMovies = true
+   
     init(showID: Int) {
         self.showID = showID
         super.init(nibName: nil, bundle: nil)
@@ -40,6 +41,7 @@ class Details_ViewController: UIViewController {
     
     func configureViewController (){
         view.backgroundColor = .systemBackground
+        title = "TV Show Details"
         let add  = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButton))
         navigationItem.rightBarButtonItem = add
     }
@@ -50,7 +52,6 @@ class Details_ViewController: UIViewController {
         NetworkManger.shared.get(.showDetail, showID: showID, page: nil, urlString: "")
         {[weak self] (response: Show? ) in
             guard let self = self else{return}
-            
             guard let show = response else {
                 print("Saving error occured ")
                 return
@@ -65,11 +66,11 @@ class Details_ViewController: UIViewController {
         let show = Show(id: show.id, overview: show.overview, voteCount: show.voteCount, name: show.name, backdropPath: show.backdropPath, voteAverage: show.voteAverage, firstAirDate: show.firstAirDate)
         
         SaveManger.updateWith(favorite: show, actionType: .add){ error in
-            guard let error = error else{
-                print("Saved")
+            guard error != nil else{
+             self.alert(message: "Saved.", title:"")
                 return
             }
-            print("something went wrong")
+             self.alert(message: "You already saved this.", title: "")
         }
     }
     
@@ -107,12 +108,11 @@ class Details_ViewController: UIViewController {
     }
     
     func layoutUI() {
-        let padding: CGFloat            = 20
         let textImagePadding: CGFloat   = 10
         bodyLabel.numberOfLines = 0
 
         NSLayoutConstraint.activate([
-            tvImage.topAnchor.constraint(equalTo: view.topAnchor,constant: 75),
+            tvImage.topAnchor.constraint(equalTo: view.topAnchor,constant: 95),
             tvImage.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 10),
             tvImage.widthAnchor.constraint(equalToConstant: 140),
             tvImage.heightAnchor.constraint(equalToConstant: 140),

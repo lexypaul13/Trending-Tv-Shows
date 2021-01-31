@@ -23,10 +23,8 @@ class TvCellCollectionViewCell: UICollectionViewCell {
     }
     
     func setCell(show:Show){
-        
         if let path = show.backdropPath{tvImage.downloadTVImage(path)}
-        
-        tvName.text = show.name
+        tvName.text = show.unwrappedName
     }
     
     private func set() {
@@ -40,7 +38,6 @@ class TvCellCollectionViewCell: UICollectionViewCell {
             tvImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
             tvImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
             tvImage.heightAnchor.constraint(equalTo: tvImage.widthAnchor),
-
             tvName.topAnchor.constraint(equalTo: tvImage.bottomAnchor, constant: 12),
             tvName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
             tvName.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),])

@@ -20,7 +20,8 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate {
     var dataSource: UICollectionViewDiffableDataSource<Section,Show>!
     var filteredShows : [Show] = []
     var page = 1
-    var isSearching = false
+    var show_ID = 0
+    var isSearching = true
     var loadMoreMovies = true
     
     
@@ -63,9 +64,16 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let activeArray     = isSearching ? filteredShows : shows
-        guard let showID = activeArray[indexPath.item].id else { return }
-        let detailsVC = Details_ViewController(showID: showID)
+        var activeArray: Show
+
+        if isSearching {
+            activeArray = shows[indexPath.row]
+        } else {
+            activeArray = filteredShows[indexPath.row]
+        }
+        let detailsVC = Details_ViewController(showID:show_ID)
+        detailsVC.showID = activeArray.id ?? 0
+        
         let navController   = UINavigationController(rootViewController: detailsVC)
         present(navController, animated: true)
     }
@@ -88,13 +96,7 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate {
             self?.dismissLoadingView()
             guard let self = self else { return }
             guard let shows = response?.shows else {
-                DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "Check Internet Connection", message: ErroMessage.unableToComplete.rawValue,preferredStyle: UIAlertController.Style.alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                    
-                }
-                
+             self.alert(message: "Check Internet Connection", title:  ErroMessage.unableToComplete.rawValue)
                 return
             }
             DispatchQueue.main.async {
@@ -104,7 +106,6 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate {
                     self.shows.append(contentsOf: shows)
                 }
                 self.updateData(shows: self.shows)
-                
             }
             
         }
@@ -144,24 +145,22 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate {
 extension WeeklyViewController: UISearchResultsUpdating{
     
     func updateSearchResults(for searchController: UISearchController) {
-        guard let filter = searchController.searchBar.text, filter.isEmpty else {
-//            filteredShows.removeAll()
-//            updateData(shows: shows)
-//            isSearching = false
-            return
+        if searchController.searchBar.text != ""{
+            isSearching = false
+            filteredShows = shows.filter({$0.unwrappedName.lowercased().contains((searchController.searchBar.text ?? "").lowercased())})
+            updateData(shows: filteredShows)
         }
-        isSearching = true
-        filteredShows = shows.filter { ($0.unwrappedName.lowercased().contains(filter.lowercased())) }
-        updateData(shows: filteredShows)
+        else {
+            updateData(shows: shows)
+        }
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         isSearching = false
         updateData(shows: filteredShows)
     }
-    
-    
 }
+
 extension WeeklyViewController:UICollectionViewDelegate{
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {

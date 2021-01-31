@@ -18,21 +18,19 @@ class BodyLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     convenience init(textAlignment:NSTextAlignment) {
         self.init(frame:.zero)
         self.textAlignment = textAlignment
-        
     }
     
     private func set () {
-        textColor = .secondaryLabel
+        textColor = .black
         font = UIFont.preferredFont(forTextStyle: .body)
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.75
         lineBreakMode = .byWordWrapping
         translatesAutoresizingMaskIntoConstraints = false
-        numberOfLines = 0
+        numberOfLines = 60
     }
     
 }

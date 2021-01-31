@@ -22,15 +22,14 @@ class TitleLabel: UILabel {
         self.init(frame:.zero)
         self.textAlignment = textAlignment
         self.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
-        self.font = UIFont(name: "Arial", size: fontSize)
-
-
+        self.font = UIFont(name: "Times NewsRoman", size: fontSize)
     }
     
     private func set(){
         textColor = .label    
-        adjustsFontSizeToFitWidth = true
-        minimumScaleFactor = 0.05
+        adjustsFontSizeToFitWidth = false
+        minimumScaleFactor = 0.50
+        numberOfLines = 2
         lineBreakMode = .byTruncatingTail
         translatesAutoresizingMaskIntoConstraints = false
     }
