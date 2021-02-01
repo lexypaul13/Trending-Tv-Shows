@@ -4,4 +4,5 @@ Trending-Tv-Shows is a mobile application written and built programmatically in 
 * Save and Delete a Tvshow.
 * Display the information of a tv show
 
-![Trending Tv Shows](https://user-images.githubusercontent.com/55071531/106402316-f052e080-63f6-11eb-977b-538520bb1d3e.gif)
+![Trending Tv Shows](https://user-images.githubusercontent.com/55071531/106402487-acaca680-63f7-11eb-9a1c-3de6de8758ec.gif)
+
