@@ -101,7 +101,7 @@ class NetworkManger {
     private func urlBuilder(endPoint: EndPoint, showID: Int?, page: Int? = nil) -> URL? {
         switch endPoint {
         case .showList:
-            return URL(string: baseURL + "trending/tv/week" + apiKeyPathCompononent + "&page=\(page ?? 1)" + languageParam)
+            return URL(string: baseURL + "trending/tv/day" + apiKeyPathCompononent + "&page=\(page ?? 1)" + languageParam)
         case .showDetail:
             guard let id = showID else { return nil }
             return URL(string: baseURL + "tv/\(id)" + apiKeyPathCompononent + languageParam)

@@ -8,6 +8,7 @@
 import Foundation
 
 struct Show: Codable, Hashable {
+    
     let id: Int?
     let overview:String?
     let voteCount: Int?
@@ -15,6 +16,7 @@ struct Show: Codable, Hashable {
     let backdropPath: String?
     let voteAverage :Double?
     let firstAirDate :String?
+    
 }
 
 

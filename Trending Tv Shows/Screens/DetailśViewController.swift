@@ -40,7 +40,7 @@ class Details_ViewController: UIViewController {
     }
     
     func configureViewController (){
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .white
         title = "TV Show Details"
         let add  = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButton))
         navigationItem.rightBarButtonItem = add
@@ -112,19 +112,19 @@ class Details_ViewController: UIViewController {
         bodyLabel.numberOfLines = 0
 
         NSLayoutConstraint.activate([
-            tvImage.topAnchor.constraint(equalTo: view.topAnchor,constant: 95),
+            tvImage.topAnchor.constraint(equalTo: view.topAnchor,constant: 56),
             tvImage.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 10),
             tvImage.widthAnchor.constraint(equalToConstant: 140),
             tvImage.heightAnchor.constraint(equalToConstant: 140),
             tvImage.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor,constant: 25),
             
-            titleLabel.topAnchor.constraint(equalTo: tvImage.topAnchor, constant: 20),
-            titleLabel.leadingAnchor.constraint(equalTo: tvImage.trailingAnchor, constant: 12),
+            titleLabel.topAnchor.constraint(equalTo: tvImage.centerYAnchor, constant: -96),
+            titleLabel.leadingAnchor.constraint(equalTo: tvImage.trailingAnchor, constant: 10),
             titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            titleLabel.heightAnchor.constraint(equalToConstant: 38),
+            titleLabel.heightAnchor.constraint(equalToConstant: 90),
             
             
-            dateLabel.centerYAnchor.constraint(equalTo: tvImage.centerYAnchor, constant: 12),
+            dateLabel.topAnchor.constraint(equalTo: tvImage.centerYAnchor, constant: -50),
             dateLabel.leadingAnchor.constraint(equalTo: tvImage.trailingAnchor, constant: textImagePadding),
             dateLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             dateLabel.heightAnchor.constraint(equalToConstant: 90),
@@ -147,10 +147,10 @@ class Details_ViewController: UIViewController {
             DispatchQueue.main.async {self.configureUIElements()}
             
         }
-        
-        
-        
     }
+    
+    
+    
 }
 
 
