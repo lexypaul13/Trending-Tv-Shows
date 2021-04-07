@@ -22,6 +22,7 @@ class TvImage: UIImageView {
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
         contentMode = .scaleAspectFill
+        backgroundColor = .systemBackground
     }
     
     func downloadTVImage(_ url:String) { 
