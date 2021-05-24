@@ -17,6 +17,12 @@
 		573EC70525BA7F08003477E1 /* SaveManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = 573EC70425BA7F08003477E1 /* SaveManager .swift */; };
 		5760A60925A97D0C0011CF3B /* SecondaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760A60825A97D0C0011CF3B /* SecondaryLabel.swift */; };
 		5760A61825A97FFC0011CF3B /* TvImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760A61725A97FFC0011CF3B /* TvImage.swift */; };
+		5765A8F0265C4B4A00105179 /* Trending_Tv_Shows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765A8EF265C4B4A00105179 /* Trending_Tv_Shows.swift */; };
+		5765A8F2265C4B6300105179 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765A8F1265C4B6300105179 /* NetworkManagerTests.swift */; };
+		5765A8F4265C4BE900105179 /* SaveManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765A8F3265C4BE800105179 /* SaveManagerTests.swift */; };
+		5765A8F7265C4CD200105179 /* Trending_Tv_ShowsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765A8F6265C4CD200105179 /* Trending_Tv_ShowsUITests.swift */; };
+		5765A8F9265C4D1300105179 /* WeeklyViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765A8F8265C4D1300105179 /* WeeklyViewUITests.swift */; };
+		5765A8FB265C4D6900105179 /* FavouriteViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765A8FA265C4D6900105179 /* FavouriteViewUITests.swift */; };
 		57A3232C25C65E7D009BE35C /* UI+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A3232B25C65E7D009BE35C /* UI+Ext.swift */; };
 		57A730A425AC725C0091ED84 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A730A325AC725C0091ED84 /* AnimationViewController.swift */; };
 		57AD1C0F25A97A250079E829 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AD1C0E25A97A250079E829 /* TitleLabel.swift */; };
@@ -26,8 +32,6 @@
 		57E3B75725A563BB00C98BF6 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3B75625A563BB00C98BF6 /* FavoriteViewController.swift */; };
 		57E3B75C25A563BB00C98BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E3B75B25A563BB00C98BF6 /* Assets.xcassets */; };
 		57E3B75F25A563BB00C98BF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E3B75D25A563BB00C98BF6 /* LaunchScreen.storyboard */; };
-		57E3B76A25A563BC00C98BF6 /* Trending_Tv_ShowsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3B76925A563BC00C98BF6 /* Trending_Tv_ShowsTests.swift */; };
-		57E3B77525A563BC00C98BF6 /* Trending_Tv_ShowsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3B77425A563BC00C98BF6 /* Trending_Tv_ShowsUITests.swift */; };
 		57EB3D4825AAB91000265DCF /* TvCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3D4725AAB91000265DCF /* TvCellCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +63,14 @@
 		573EC70425BA7F08003477E1 /* SaveManager .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SaveManager .swift"; sourceTree = "<group>"; };
 		5760A60825A97D0C0011CF3B /* SecondaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryLabel.swift; sourceTree = "<group>"; };
 		5760A61725A97FFC0011CF3B /* TvImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvImage.swift; sourceTree = "<group>"; };
+		5765A8EE265C4B4900105179 /* Trending Tv ShowsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Trending Tv ShowsTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		5765A8EF265C4B4A00105179 /* Trending_Tv_Shows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trending_Tv_Shows.swift; sourceTree = "<group>"; };
+		5765A8F1265C4B6300105179 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		5765A8F3265C4BE800105179 /* SaveManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveManagerTests.swift; sourceTree = "<group>"; };
+		5765A8F5265C4CD200105179 /* Trending Tv ShowsUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Trending Tv ShowsUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		5765A8F6265C4CD200105179 /* Trending_Tv_ShowsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trending_Tv_ShowsUITests.swift; sourceTree = "<group>"; };
+		5765A8F8265C4D1300105179 /* WeeklyViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyViewUITests.swift; sourceTree = "<group>"; };
+		5765A8FA265C4D6900105179 /* FavouriteViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewUITests.swift; sourceTree = "<group>"; };
 		57A3232B25C65E7D009BE35C /* UI+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI+Ext.swift"; sourceTree = "<group>"; };
 		57A730A325AC725C0091ED84 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		57AD1C0E25A97A250079E829 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
@@ -71,10 +83,8 @@
 		57E3B75E25A563BB00C98BF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57E3B76025A563BC00C98BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57E3B76525A563BC00C98BF6 /* Trending Tv ShowsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trending Tv ShowsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		57E3B76925A563BC00C98BF6 /* Trending_Tv_ShowsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trending_Tv_ShowsTests.swift; sourceTree = "<group>"; };
 		57E3B76B25A563BC00C98BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57E3B77025A563BC00C98BF6 /* Trending Tv ShowsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trending Tv ShowsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		57E3B77425A563BC00C98BF6 /* Trending_Tv_ShowsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trending_Tv_ShowsUITests.swift; sourceTree = "<group>"; };
 		57E3B77625A563BC00C98BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57EB3D4725AAB91000265DCF /* TvCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvCellCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,8 +205,11 @@
 		57E3B76825A563BC00C98BF6 /* Trending Tv ShowsTests */ = {
 			isa = PBXGroup;
 			children = (
-				57E3B76925A563BC00C98BF6 /* Trending_Tv_ShowsTests.swift */,
 				57E3B76B25A563BC00C98BF6 /* Info.plist */,
+				5765A8EF265C4B4A00105179 /* Trending_Tv_Shows.swift */,
+				5765A8F1265C4B6300105179 /* NetworkManagerTests.swift */,
+				5765A8F3265C4BE800105179 /* SaveManagerTests.swift */,
+				5765A8EE265C4B4900105179 /* Trending Tv ShowsTests-Bridging-Header.h */,
 			);
 			path = "Trending Tv ShowsTests";
 			sourceTree = "<group>";
@@ -204,8 +217,11 @@
 		57E3B77325A563BC00C98BF6 /* Trending Tv ShowsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				57E3B77425A563BC00C98BF6 /* Trending_Tv_ShowsUITests.swift */,
 				57E3B77625A563BC00C98BF6 /* Info.plist */,
+				5765A8F6265C4CD200105179 /* Trending_Tv_ShowsUITests.swift */,
+				5765A8F8265C4D1300105179 /* WeeklyViewUITests.swift */,
+				5765A8FA265C4D6900105179 /* FavouriteViewUITests.swift */,
+				5765A8F5265C4CD200105179 /* Trending Tv ShowsUITests-Bridging-Header.h */,
 			);
 			path = "Trending Tv ShowsUITests";
 			sourceTree = "<group>";
@@ -296,10 +312,12 @@
 					};
 					57E3B76425A563BC00C98BF6 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1250;
 						TestTargetID = 57E3B74E25A563BB00C98BF6;
 					};
 					57E3B76F25A563BC00C98BF6 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1250;
 						TestTargetID = 57E3B74E25A563BB00C98BF6;
 					};
 				};
@@ -380,7 +398,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57E3B76A25A563BC00C98BF6 /* Trending_Tv_ShowsTests.swift in Sources */,
+				5765A8F2265C4B6300105179 /* NetworkManagerTests.swift in Sources */,
+				5765A8F0265C4B4A00105179 /* Trending_Tv_Shows.swift in Sources */,
+				5765A8F4265C4BE900105179 /* SaveManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,7 +408,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57E3B77525A563BC00C98BF6 /* Trending_Tv_ShowsUITests.swift in Sources */,
+				5765A8FB265C4D6900105179 /* FavouriteViewUITests.swift in Sources */,
+				5765A8F7265C4CD200105179 /* Trending_Tv_ShowsUITests.swift in Sources */,
+				5765A8F9265C4D1300105179 /* WeeklyViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +602,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Trending Tv ShowsTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
@@ -590,6 +613,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "N-A.Trending-Tv-ShowsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Trending Tv ShowsTests/Trending Tv ShowsTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trending Tv Shows.app/Trending Tv Shows";
@@ -601,6 +626,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Trending Tv ShowsTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
@@ -611,6 +637,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "N-A.Trending-Tv-ShowsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Trending Tv ShowsTests/Trending Tv ShowsTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trending Tv Shows.app/Trending Tv Shows";
@@ -621,6 +648,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Trending Tv ShowsUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -630,6 +658,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "N-A.Trending-Tv-ShowsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Trending Tv ShowsUITests/Trending Tv ShowsUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Trending Tv Shows";
@@ -640,6 +670,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Trending Tv ShowsUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -649,6 +680,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "N-A.Trending-Tv-ShowsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Trending Tv ShowsUITests/Trending Tv ShowsUITests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Trending Tv Shows";

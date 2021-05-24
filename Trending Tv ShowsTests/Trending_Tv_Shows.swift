@@ -1,14 +1,13 @@
 //
-//  Trending_Tv_ShowsTests.swift
+//  Trending_Tv_Shows.swift
 //  Trending Tv ShowsTests
 //
-//  Created by Alex Paul on 1/5/21.
+//  Created by Alex Paul on 5/24/21.
 //
 
 import XCTest
-@testable import Trending_Tv_Shows
 
-class Trending_Tv_ShowsTests: XCTestCase {
+class Trending_Tv_Shows: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
