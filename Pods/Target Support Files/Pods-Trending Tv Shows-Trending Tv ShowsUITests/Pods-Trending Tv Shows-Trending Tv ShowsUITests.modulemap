@@ -1,0 +1,6 @@
+framework module Pods_Trending_Tv_Shows_Trending_Tv_ShowsUITests {
+  umbrella header "Pods-Trending Tv Shows-Trending Tv ShowsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

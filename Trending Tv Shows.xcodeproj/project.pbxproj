@@ -1,0 +1,942 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		35C8A029D0BD39F437C57036 /* Pods_Trending_Tv_Shows_Trending_Tv_ShowsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6E73732E3BA67FCC01E38E /* Pods_Trending_Tv_Shows_Trending_Tv_ShowsUITests.framework */; };
+		5730E32E25A6BFD200BD7D91 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E32D25A6BFD200BD7D91 /* TabBarViewController.swift */; };
+		5730E33325A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E33225A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift */; };
+		5730E34325A6C6ED00BD7D91 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E34225A6C6ED00BD7D91 /* Show.swift */; };
+		5730E34825A6CEC900BD7D91 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E34725A6CEC900BD7D91 /* NetworkManager.swift */; };
+		5730E34D25A6CF0800BD7D91 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E34C25A6CF0800BD7D91 /* ErrorMessage.swift */; };
+		573EC6F525BA6EC7003477E1 /* DetailśViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573EC6F425BA6EC7003477E1 /* DetailśViewController.swift */; };
+		573EC70025BA7C3E003477E1 /* TvTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573EC6FF25BA7C3E003477E1 /* TvTableViewCell.swift */; };
+		573EC70525BA7F08003477E1 /* SaveManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = 573EC70425BA7F08003477E1 /* SaveManager .swift */; };
+		5760A60925A97D0C0011CF3B /* SecondaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760A60825A97D0C0011CF3B /* SecondaryLabel.swift */; };
+		5760A61825A97FFC0011CF3B /* TvImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760A61725A97FFC0011CF3B /* TvImage.swift */; };
+		5765A8F0265C4B4A00105179 /* Trending_Tv_Shows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765A8EF265C4B4A00105179 /* Trending_Tv_Shows.swift */; };
+		5765A8F2265C4B6300105179 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765A8F1265C4B6300105179 /* NetworkManagerTests.swift */; };
+		5765A8F4265C4BE900105179 /* SaveManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765A8F3265C4BE800105179 /* SaveManagerTests.swift */; };
+		5765A8F7265C4CD200105179 /* Trending_Tv_ShowsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765A8F6265C4CD200105179 /* Trending_Tv_ShowsUITests.swift */; };
+		5765A8F9265C4D1300105179 /* WeeklyViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765A8F8265C4D1300105179 /* WeeklyViewUITests.swift */; };
+		5765A8FB265C4D6900105179 /* FavouriteViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765A8FA265C4D6900105179 /* FavouriteViewUITests.swift */; };
+		57A3232C25C65E7D009BE35C /* UI+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A3232B25C65E7D009BE35C /* UI+Ext.swift */; };
+		57A730A425AC725C0091ED84 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A730A325AC725C0091ED84 /* AnimationViewController.swift */; };
+		57AD1C0F25A97A250079E829 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AD1C0E25A97A250079E829 /* TitleLabel.swift */; };
+		57AD1C1425A97B450079E829 /* BodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AD1C1325A97B450079E829 /* BodyLabel.swift */; };
+		57E3B75325A563BB00C98BF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3B75225A563BB00C98BF6 /* AppDelegate.swift */; };
+		57E3B75525A563BB00C98BF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3B75425A563BB00C98BF6 /* SceneDelegate.swift */; };
+		57E3B75725A563BB00C98BF6 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E3B75625A563BB00C98BF6 /* FavoriteViewController.swift */; };
+		57E3B75C25A563BB00C98BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E3B75B25A563BB00C98BF6 /* Assets.xcassets */; };
+		57E3B75F25A563BB00C98BF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E3B75D25A563BB00C98BF6 /* LaunchScreen.storyboard */; };
+		57EB3D4825AAB91000265DCF /* TvCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3D4725AAB91000265DCF /* TvCellCollectionViewCell.swift */; };
+		8BA195FBCF629794F27034D4 /* Pods_Trending_Tv_Shows.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4960A8938BD4BB7508AA92BA /* Pods_Trending_Tv_Shows.framework */; };
+		B50C71A6266B60DE00ED49D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B50C71A5266B60DE00ED49D2 /* Main.storyboard */; };
+		B50C71AB266B720300ED49D2 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50C71AA266B720200ED49D2 /* SideMenuViewController.swift */; };
+		B50C71C2266B738200ED49D2 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50C71C0266B738200ED49D2 /* AboutUsViewController.swift */; };
+		B50C71C3266B738200ED49D2 /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50C71C1266B738200ED49D2 /* AboutUsViewController.xib */; };
+		B50C71CC266BA4E700ED49D2 /* RecentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50C71CB266BA4E700ED49D2 /* RecentViewController.swift */; };
+		B50C71D6266BBCC800ED49D2 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50C71D4266BBCC800ED49D2 /* ContactUsViewController.swift */; };
+		B50C71D7266BBCC800ED49D2 /* ContactUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50C71D5266BBCC800ED49D2 /* ContactUsViewController.xib */; };
+		FF8C464F03327BA95DC388A3 /* Pods_Trending_Tv_ShowsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8AC2BEFA79CC07209B2E4E /* Pods_Trending_Tv_ShowsTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		57E3B76625A563BC00C98BF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57E3B74725A563BB00C98BF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57E3B74E25A563BB00C98BF6;
+			remoteInfo = "Trending Tv Shows";
+		};
+		57E3B77125A563BC00C98BF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57E3B74725A563BB00C98BF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57E3B74E25A563BB00C98BF6;
+			remoteInfo = "Trending Tv Shows";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2A6E73732E3BA67FCC01E38E /* Pods_Trending_Tv_Shows_Trending_Tv_ShowsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trending_Tv_Shows_Trending_Tv_ShowsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4960A8938BD4BB7508AA92BA /* Pods_Trending_Tv_Shows.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trending_Tv_Shows.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5730E32D25A6BFD200BD7D91 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		5730E33225A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyViewControllerViewController.swift; sourceTree = "<group>"; };
+		5730E34225A6C6ED00BD7D91 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
+		5730E34725A6CEC900BD7D91 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5730E34C25A6CF0800BD7D91 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		573EC6F425BA6EC7003477E1 /* DetailśViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailśViewController.swift"; sourceTree = "<group>"; };
+		573EC6FF25BA7C3E003477E1 /* TvTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvTableViewCell.swift; sourceTree = "<group>"; };
+		573EC70425BA7F08003477E1 /* SaveManager .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SaveManager .swift"; sourceTree = "<group>"; };
+		5760A60825A97D0C0011CF3B /* SecondaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryLabel.swift; sourceTree = "<group>"; };
+		5760A61725A97FFC0011CF3B /* TvImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvImage.swift; sourceTree = "<group>"; };
+		5765A8EE265C4B4900105179 /* Trending Tv ShowsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Trending Tv ShowsTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		5765A8EF265C4B4A00105179 /* Trending_Tv_Shows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trending_Tv_Shows.swift; sourceTree = "<group>"; };
+		5765A8F1265C4B6300105179 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		5765A8F3265C4BE800105179 /* SaveManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveManagerTests.swift; sourceTree = "<group>"; };
+		5765A8F5265C4CD200105179 /* Trending Tv ShowsUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Trending Tv ShowsUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		5765A8F6265C4CD200105179 /* Trending_Tv_ShowsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trending_Tv_ShowsUITests.swift; sourceTree = "<group>"; };
+		5765A8F8265C4D1300105179 /* WeeklyViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyViewUITests.swift; sourceTree = "<group>"; };
+		5765A8FA265C4D6900105179 /* FavouriteViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewUITests.swift; sourceTree = "<group>"; };
+		57A3232B25C65E7D009BE35C /* UI+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI+Ext.swift"; sourceTree = "<group>"; };
+		57A730A325AC725C0091ED84 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		57AD1C0E25A97A250079E829 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
+		57AD1C1325A97B450079E829 /* BodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyLabel.swift; sourceTree = "<group>"; };
+		57E3B74F25A563BB00C98BF6 /* Trending Tv Shows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trending Tv Shows.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57E3B75225A563BB00C98BF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		57E3B75425A563BB00C98BF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		57E3B75625A563BB00C98BF6 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		57E3B75B25A563BB00C98BF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57E3B75E25A563BB00C98BF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		57E3B76025A563BC00C98BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57E3B76525A563BC00C98BF6 /* Trending Tv ShowsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trending Tv ShowsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57E3B76B25A563BC00C98BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57E3B77025A563BC00C98BF6 /* Trending Tv ShowsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trending Tv ShowsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57E3B77625A563BC00C98BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57EB3D4725AAB91000265DCF /* TvCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		689A18DC9F941034AA3CB225 /* Pods-Trending Tv Shows.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trending Tv Shows.debug.xcconfig"; path = "Target Support Files/Pods-Trending Tv Shows/Pods-Trending Tv Shows.debug.xcconfig"; sourceTree = "<group>"; };
+		72102237C5F74B5AED1AE2C2 /* Pods-Trending Tv ShowsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trending Tv ShowsTests.debug.xcconfig"; path = "Target Support Files/Pods-Trending Tv ShowsTests/Pods-Trending Tv ShowsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8E40C9EA12457E9CDE5F7571 /* Pods-Trending Tv Shows-Trending Tv ShowsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trending Tv Shows-Trending Tv ShowsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Trending Tv Shows-Trending Tv ShowsUITests/Pods-Trending Tv Shows-Trending Tv ShowsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		978415474B05AA4CBF6B931B /* Pods-Trending Tv ShowsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trending Tv ShowsTests.release.xcconfig"; path = "Target Support Files/Pods-Trending Tv ShowsTests/Pods-Trending Tv ShowsTests.release.xcconfig"; sourceTree = "<group>"; };
+		9C8AC2BEFA79CC07209B2E4E /* Pods_Trending_Tv_ShowsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trending_Tv_ShowsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA694F83DC5FBD161EAF726D /* Pods-Trending Tv Shows.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trending Tv Shows.release.xcconfig"; path = "Target Support Files/Pods-Trending Tv Shows/Pods-Trending Tv Shows.release.xcconfig"; sourceTree = "<group>"; };
+		B50C71A5266B60DE00ED49D2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B50C71AA266B720200ED49D2 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		B50C71C0266B738200ED49D2 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		B50C71C1266B738200ED49D2 /* AboutUsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
+		B50C71CB266BA4E700ED49D2 /* RecentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentViewController.swift; sourceTree = "<group>"; };
+		B50C71D4266BBCC800ED49D2 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		B50C71D5266BBCC800ED49D2 /* ContactUsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactUsViewController.xib; sourceTree = "<group>"; };
+		FED237180926D19C3551FA0B /* Pods-Trending Tv Shows-Trending Tv ShowsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trending Tv Shows-Trending Tv ShowsUITests.release.xcconfig"; path = "Target Support Files/Pods-Trending Tv Shows-Trending Tv ShowsUITests/Pods-Trending Tv Shows-Trending Tv ShowsUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57E3B74C25A563BB00C98BF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BA195FBCF629794F27034D4 /* Pods_Trending_Tv_Shows.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57E3B76225A563BC00C98BF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF8C464F03327BA95DC388A3 /* Pods_Trending_Tv_ShowsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57E3B76D25A563BC00C98BF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35C8A029D0BD39F437C57036 /* Pods_Trending_Tv_Shows_Trending_Tv_ShowsUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5730E33A25A6C2DF00BD7D91 /* Tab Controllers  */ = {
+			isa = PBXGroup;
+			children = (
+				5730E32D25A6BFD200BD7D91 /* TabBarViewController.swift */,
+			);
+			path = "Tab Controllers ";
+			sourceTree = "<group>";
+		};
+		5730E33E25A6C2F900BD7D91 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B50C71D3266BBCA600ED49D2 /* ContactUsViewController */,
+				B50C71BF266B735F00ED49D2 /* AboutUsViewController */,
+				B50C719A266B608000ED49D2 /* SideMenu */,
+				5730E33225A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift */,
+				573EC6F425BA6EC7003477E1 /* DetailśViewController.swift */,
+				57E3B75625A563BB00C98BF6 /* FavoriteViewController.swift */,
+				57A3232B25C65E7D009BE35C /* UI+Ext.swift */,
+				B50C71CB266BA4E700ED49D2 /* RecentViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		5730E35425A6D77000BD7D91 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				573EC70425BA7F08003477E1 /* SaveManager .swift */,
+				5730E34725A6CEC900BD7D91 /* NetworkManager.swift */,
+				5730E34C25A6CF0800BD7D91 /* ErrorMessage.swift */,
+				5730E34225A6C6ED00BD7D91 /* Show.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5760A60D25A97D360011CF3B /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				57AD1C0E25A97A250079E829 /* TitleLabel.swift */,
+				5760A60825A97D0C0011CF3B /* SecondaryLabel.swift */,
+				57AD1C1325A97B450079E829 /* BodyLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		57B7467725B5245C00D0A11D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				57EB3D4725AAB91000265DCF /* TvCellCollectionViewCell.swift */,
+				573EC6FF25BA7C3E003477E1 /* TvTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		57E3B74625A563BB00C98BF6 = {
+			isa = PBXGroup;
+			children = (
+				57E3B75125A563BB00C98BF6 /* Trending Tv Shows */,
+				57E3B76825A563BC00C98BF6 /* Trending Tv ShowsTests */,
+				57E3B77325A563BC00C98BF6 /* Trending Tv ShowsUITests */,
+				57E3B75025A563BB00C98BF6 /* Products */,
+				802AC2B15586B994B7F0A254 /* Pods */,
+				D4623AE97A375B9D64056282 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		57E3B75025A563BB00C98BF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57E3B74F25A563BB00C98BF6 /* Trending Tv Shows.app */,
+				57E3B76525A563BC00C98BF6 /* Trending Tv ShowsTests.xctest */,
+				57E3B77025A563BC00C98BF6 /* Trending Tv ShowsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57E3B75125A563BB00C98BF6 /* Trending Tv Shows */ = {
+			isa = PBXGroup;
+			children = (
+				57E3B75225A563BB00C98BF6 /* AppDelegate.swift */,
+				57EB3D4C25AABA1100265DCF /* UIExtension */,
+				5730E35425A6D77000BD7D91 /* Models */,
+				5730E33A25A6C2DF00BD7D91 /* Tab Controllers  */,
+				5730E33E25A6C2F900BD7D91 /* Screens */,
+				57B7467725B5245C00D0A11D /* Cells */,
+				5760A60D25A97D360011CF3B /* Labels */,
+				57F31A6A25A9925700D788FE /* Image */,
+				57E3B75B25A563BB00C98BF6 /* Assets.xcassets */,
+				B50C71A5266B60DE00ED49D2 /* Main.storyboard */,
+				57E3B75D25A563BB00C98BF6 /* LaunchScreen.storyboard */,
+				57E3B75425A563BB00C98BF6 /* SceneDelegate.swift */,
+				57E3B76025A563BC00C98BF6 /* Info.plist */,
+			);
+			path = "Trending Tv Shows";
+			sourceTree = "<group>";
+		};
+		57E3B76825A563BC00C98BF6 /* Trending Tv ShowsTests */ = {
+			isa = PBXGroup;
+			children = (
+				57E3B76B25A563BC00C98BF6 /* Info.plist */,
+				5765A8EF265C4B4A00105179 /* Trending_Tv_Shows.swift */,
+				5765A8F1265C4B6300105179 /* NetworkManagerTests.swift */,
+				5765A8F3265C4BE800105179 /* SaveManagerTests.swift */,
+				5765A8EE265C4B4900105179 /* Trending Tv ShowsTests-Bridging-Header.h */,
+			);
+			path = "Trending Tv ShowsTests";
+			sourceTree = "<group>";
+		};
+		57E3B77325A563BC00C98BF6 /* Trending Tv ShowsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				57E3B77625A563BC00C98BF6 /* Info.plist */,
+				5765A8F6265C4CD200105179 /* Trending_Tv_ShowsUITests.swift */,
+				5765A8F8265C4D1300105179 /* WeeklyViewUITests.swift */,
+				5765A8FA265C4D6900105179 /* FavouriteViewUITests.swift */,
+				5765A8F5265C4CD200105179 /* Trending Tv ShowsUITests-Bridging-Header.h */,
+			);
+			path = "Trending Tv ShowsUITests";
+			sourceTree = "<group>";
+		};
+		57EB3D4C25AABA1100265DCF /* UIExtension */ = {
+			isa = PBXGroup;
+			children = (
+				57A730A325AC725C0091ED84 /* AnimationViewController.swift */,
+			);
+			path = UIExtension;
+			sourceTree = "<group>";
+		};
+		57F31A6A25A9925700D788FE /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				5760A61725A97FFC0011CF3B /* TvImage.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		802AC2B15586B994B7F0A254 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				689A18DC9F941034AA3CB225 /* Pods-Trending Tv Shows.debug.xcconfig */,
+				AA694F83DC5FBD161EAF726D /* Pods-Trending Tv Shows.release.xcconfig */,
+				8E40C9EA12457E9CDE5F7571 /* Pods-Trending Tv Shows-Trending Tv ShowsUITests.debug.xcconfig */,
+				FED237180926D19C3551FA0B /* Pods-Trending Tv Shows-Trending Tv ShowsUITests.release.xcconfig */,
+				72102237C5F74B5AED1AE2C2 /* Pods-Trending Tv ShowsTests.debug.xcconfig */,
+				978415474B05AA4CBF6B931B /* Pods-Trending Tv ShowsTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B50C719A266B608000ED49D2 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				B50C71AA266B720200ED49D2 /* SideMenuViewController.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		B50C71BF266B735F00ED49D2 /* AboutUsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B50C71C0266B738200ED49D2 /* AboutUsViewController.swift */,
+				B50C71C1266B738200ED49D2 /* AboutUsViewController.xib */,
+			);
+			path = AboutUsViewController;
+			sourceTree = "<group>";
+		};
+		B50C71D3266BBCA600ED49D2 /* ContactUsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B50C71D4266BBCC800ED49D2 /* ContactUsViewController.swift */,
+				B50C71D5266BBCC800ED49D2 /* ContactUsViewController.xib */,
+			);
+			path = ContactUsViewController;
+			sourceTree = "<group>";
+		};
+		D4623AE97A375B9D64056282 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4960A8938BD4BB7508AA92BA /* Pods_Trending_Tv_Shows.framework */,
+				2A6E73732E3BA67FCC01E38E /* Pods_Trending_Tv_Shows_Trending_Tv_ShowsUITests.framework */,
+				9C8AC2BEFA79CC07209B2E4E /* Pods_Trending_Tv_ShowsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		57E3B74E25A563BB00C98BF6 /* Trending Tv Shows */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57E3B77925A563BC00C98BF6 /* Build configuration list for PBXNativeTarget "Trending Tv Shows" */;
+			buildPhases = (
+				E0AA1405C9E9D08CE965C8D3 /* [CP] Check Pods Manifest.lock */,
+				57E3B74B25A563BB00C98BF6 /* Sources */,
+				57E3B74C25A563BB00C98BF6 /* Frameworks */,
+				57E3B74D25A563BB00C98BF6 /* Resources */,
+				3F1F8989B44C7780595EE6AB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Trending Tv Shows";
+			productName = "Trending Tv Shows";
+			productReference = 57E3B74F25A563BB00C98BF6 /* Trending Tv Shows.app */;
+			productType = "com.apple.product-type.application";
+		};
+		57E3B76425A563BC00C98BF6 /* Trending Tv ShowsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57E3B77C25A563BC00C98BF6 /* Build configuration list for PBXNativeTarget "Trending Tv ShowsTests" */;
+			buildPhases = (
+				A06D14AFA5FA486658D2320E /* [CP] Check Pods Manifest.lock */,
+				57E3B76125A563BC00C98BF6 /* Sources */,
+				57E3B76225A563BC00C98BF6 /* Frameworks */,
+				57E3B76325A563BC00C98BF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57E3B76725A563BC00C98BF6 /* PBXTargetDependency */,
+			);
+			name = "Trending Tv ShowsTests";
+			productName = "Trending Tv ShowsTests";
+			productReference = 57E3B76525A563BC00C98BF6 /* Trending Tv ShowsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		57E3B76F25A563BC00C98BF6 /* Trending Tv ShowsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57E3B77F25A563BC00C98BF6 /* Build configuration list for PBXNativeTarget "Trending Tv ShowsUITests" */;
+			buildPhases = (
+				00BB58D3AB643FBD1102287F /* [CP] Check Pods Manifest.lock */,
+				57E3B76C25A563BC00C98BF6 /* Sources */,
+				57E3B76D25A563BC00C98BF6 /* Frameworks */,
+				57E3B76E25A563BC00C98BF6 /* Resources */,
+				24DFB5E0E49CB0C989727EEA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57E3B77225A563BC00C98BF6 /* PBXTargetDependency */,
+			);
+			name = "Trending Tv ShowsUITests";
+			productName = "Trending Tv ShowsUITests";
+			productReference = 57E3B77025A563BC00C98BF6 /* Trending Tv ShowsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		57E3B74725A563BB00C98BF6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					57E3B74E25A563BB00C98BF6 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					57E3B76425A563BC00C98BF6 = {
+						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1250;
+						TestTargetID = 57E3B74E25A563BB00C98BF6;
+					};
+					57E3B76F25A563BC00C98BF6 = {
+						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1250;
+						TestTargetID = 57E3B74E25A563BB00C98BF6;
+					};
+				};
+			};
+			buildConfigurationList = 57E3B74A25A563BB00C98BF6 /* Build configuration list for PBXProject "Trending Tv Shows" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 57E3B74625A563BB00C98BF6;
+			productRefGroup = 57E3B75025A563BB00C98BF6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				57E3B74E25A563BB00C98BF6 /* Trending Tv Shows */,
+				57E3B76425A563BC00C98BF6 /* Trending Tv ShowsTests */,
+				57E3B76F25A563BC00C98BF6 /* Trending Tv ShowsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		57E3B74D25A563BB00C98BF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B50C71C3266B738200ED49D2 /* AboutUsViewController.xib in Resources */,
+				B50C71A6266B60DE00ED49D2 /* Main.storyboard in Resources */,
+				B50C71D7266BBCC800ED49D2 /* ContactUsViewController.xib in Resources */,
+				57E3B75F25A563BB00C98BF6 /* LaunchScreen.storyboard in Resources */,
+				57E3B75C25A563BB00C98BF6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57E3B76325A563BC00C98BF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57E3B76E25A563BC00C98BF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00BB58D3AB643FBD1102287F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Trending Tv Shows-Trending Tv ShowsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		24DFB5E0E49CB0C989727EEA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trending Tv Shows-Trending Tv ShowsUITests/Pods-Trending Tv Shows-Trending Tv ShowsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trending Tv Shows-Trending Tv ShowsUITests/Pods-Trending Tv Shows-Trending Tv ShowsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Trending Tv Shows-Trending Tv ShowsUITests/Pods-Trending Tv Shows-Trending Tv ShowsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F1F8989B44C7780595EE6AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trending Tv Shows/Pods-Trending Tv Shows-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trending Tv Shows/Pods-Trending Tv Shows-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Trending Tv Shows/Pods-Trending Tv Shows-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A06D14AFA5FA486658D2320E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Trending Tv ShowsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0AA1405C9E9D08CE965C8D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Trending Tv Shows-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57E3B74B25A563BB00C98BF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B50C71CC266BA4E700ED49D2 /* RecentViewController.swift in Sources */,
+				5730E32E25A6BFD200BD7D91 /* TabBarViewController.swift in Sources */,
+				5760A61825A97FFC0011CF3B /* TvImage.swift in Sources */,
+				57E3B75725A563BB00C98BF6 /* FavoriteViewController.swift in Sources */,
+				57A3232C25C65E7D009BE35C /* UI+Ext.swift in Sources */,
+				57AD1C1425A97B450079E829 /* BodyLabel.swift in Sources */,
+				573EC70525BA7F08003477E1 /* SaveManager .swift in Sources */,
+				5730E33325A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift in Sources */,
+				5730E34825A6CEC900BD7D91 /* NetworkManager.swift in Sources */,
+				5730E34D25A6CF0800BD7D91 /* ErrorMessage.swift in Sources */,
+				57EB3D4825AAB91000265DCF /* TvCellCollectionViewCell.swift in Sources */,
+				573EC6F525BA6EC7003477E1 /* DetailśViewController.swift in Sources */,
+				B50C71D6266BBCC800ED49D2 /* ContactUsViewController.swift in Sources */,
+				57E3B75325A563BB00C98BF6 /* AppDelegate.swift in Sources */,
+				57AD1C0F25A97A250079E829 /* TitleLabel.swift in Sources */,
+				5730E34325A6C6ED00BD7D91 /* Show.swift in Sources */,
+				57A730A425AC725C0091ED84 /* AnimationViewController.swift in Sources */,
+				5760A60925A97D0C0011CF3B /* SecondaryLabel.swift in Sources */,
+				573EC70025BA7C3E003477E1 /* TvTableViewCell.swift in Sources */,
+				B50C71AB266B720300ED49D2 /* SideMenuViewController.swift in Sources */,
+				B50C71C2266B738200ED49D2 /* AboutUsViewController.swift in Sources */,
+				57E3B75525A563BB00C98BF6 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57E3B76125A563BC00C98BF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5765A8F2265C4B6300105179 /* NetworkManagerTests.swift in Sources */,
+				5765A8F0265C4B4A00105179 /* Trending_Tv_Shows.swift in Sources */,
+				5765A8F4265C4BE900105179 /* SaveManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57E3B76C25A563BC00C98BF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5765A8FB265C4D6900105179 /* FavouriteViewUITests.swift in Sources */,
+				5765A8F7265C4CD200105179 /* Trending_Tv_ShowsUITests.swift in Sources */,
+				5765A8F9265C4D1300105179 /* WeeklyViewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		57E3B76725A563BC00C98BF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57E3B74E25A563BB00C98BF6 /* Trending Tv Shows */;
+			targetProxy = 57E3B76625A563BC00C98BF6 /* PBXContainerItemProxy */;
+		};
+		57E3B77225A563BC00C98BF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57E3B74E25A563BB00C98BF6 /* Trending Tv Shows */;
+			targetProxy = 57E3B77125A563BC00C98BF6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		57E3B75D25A563BB00C98BF6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57E3B75E25A563BB00C98BF6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		57E3B77725A563BC00C98BF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		57E3B77825A563BC00C98BF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		57E3B77A25A563BC00C98BF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 689A18DC9F941034AA3CB225 /* Pods-Trending Tv Shows.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.4;
+				DEVELOPMENT_TEAM = XP8B6WBPCD;
+				INFOPLIST_FILE = "Trending Tv Shows/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "N-A.Trending-Tv-Shows";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		57E3B77B25A563BC00C98BF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA694F83DC5FBD161EAF726D /* Pods-Trending Tv Shows.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.4;
+				DEVELOPMENT_TEAM = XP8B6WBPCD;
+				INFOPLIST_FILE = "Trending Tv Shows/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "N-A.Trending-Tv-Shows";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		57E3B77D25A563BC00C98BF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72102237C5F74B5AED1AE2C2 /* Pods-Trending Tv ShowsTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Trending Tv ShowsTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "N-A.Trending-Tv-ShowsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Trending Tv ShowsTests/Trending Tv ShowsTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trending Tv Shows.app/Trending Tv Shows";
+			};
+			name = Debug;
+		};
+		57E3B77E25A563BC00C98BF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 978415474B05AA4CBF6B931B /* Pods-Trending Tv ShowsTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Trending Tv ShowsTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "N-A.Trending-Tv-ShowsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Trending Tv ShowsTests/Trending Tv ShowsTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trending Tv Shows.app/Trending Tv Shows";
+			};
+			name = Release;
+		};
+		57E3B78025A563BC00C98BF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E40C9EA12457E9CDE5F7571 /* Pods-Trending Tv Shows-Trending Tv ShowsUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Trending Tv ShowsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "N-A.Trending-Tv-ShowsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Trending Tv ShowsUITests/Trending Tv ShowsUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Trending Tv Shows";
+			};
+			name = Debug;
+		};
+		57E3B78125A563BC00C98BF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FED237180926D19C3551FA0B /* Pods-Trending Tv Shows-Trending Tv ShowsUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Trending Tv ShowsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "N-A.Trending-Tv-ShowsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Trending Tv ShowsUITests/Trending Tv ShowsUITests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Trending Tv Shows";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		57E3B74A25A563BB00C98BF6 /* Build configuration list for PBXProject "Trending Tv Shows" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57E3B77725A563BC00C98BF6 /* Debug */,
+				57E3B77825A563BC00C98BF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57E3B77925A563BC00C98BF6 /* Build configuration list for PBXNativeTarget "Trending Tv Shows" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57E3B77A25A563BC00C98BF6 /* Debug */,
+				57E3B77B25A563BC00C98BF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57E3B77C25A563BC00C98BF6 /* Build configuration list for PBXNativeTarget "Trending Tv ShowsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57E3B77D25A563BC00C98BF6 /* Debug */,
+				57E3B77E25A563BC00C98BF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57E3B77F25A563BC00C98BF6 /* Build configuration list for PBXNativeTarget "Trending Tv ShowsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57E3B78025A563BC00C98BF6 /* Debug */,
+				57E3B78125A563BC00C98BF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 57E3B74725A563BB00C98BF6 /* Project object */;
+}

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutUsViewController" customModule="Trending_Tv_Shows" customModuleProvider="target">
+            <connections>
+                <outlet property="txtAboutView" destination="WQZ-WR-eiK" id="Z2U-Bd-gQI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQZ-WR-eiK">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Join Today">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" metaFont="systemBold" size="16"/>
+                                <font key="NSOriginalFont" metaFont="systemBold" size="16"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" metaFont="system" size="16"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <mutableString key="content">Get access to maintain your own custom personal lists, track what you've seen and search and filter for what to watch next—regardless if it's in theatres, on TV or available on popular streaming services like.
+
+
+✓	Enjoy TMDb ad free
+✓	Maintain a personal watchlist
+✓	Filter by your subscribed streaming services and                     find something to watch
+✓	Log the movies and TV shows you've seen
+✓	Build custom lists
+✓	Contribute to and improve our database</mutableString>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" metaFont="system" size="16"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                <real key="NSKern" value="0.0"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                <real key="NSKern" value="0.0"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                    <tabStops/>
+                                </paragraphStyle>
+                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="https://www.themoviedb.org/">
+                            <attributes>
+                                <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                <real key="NSKern" value="0.0"/>
+                                <url key="NSLink" string="https://www.themoviedb.org/"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                    <tabStops/>
+                                </paragraphStyle>
+                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <integer key="NSUnderline" value="1"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                </textView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="WQZ-WR-eiK" secondAttribute="bottom" id="29v-7b-Nwd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WQZ-WR-eiK" secondAttribute="trailing" id="LbO-Ry-kqK"/>
+                <constraint firstItem="WQZ-WR-eiK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="NFB-US-yLr"/>
+                <constraint firstItem="WQZ-WR-eiK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iAC-t7-8gz"/>
+            </constraints>
+            <point key="canvasLocation" x="-204" y="56"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
