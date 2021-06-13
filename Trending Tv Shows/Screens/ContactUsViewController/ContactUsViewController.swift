@@ -2,8 +2,6 @@
 //  ContactUsViewController.swift
 //  Trending Tv Shows
 //
-//  Created by Muhammad Awais on 05/06/2021.
-//
 
 import UIKit
 import MessageUI
@@ -11,9 +9,8 @@ import MessageUI
 class ContactUsViewController: UIViewController , MFMailComposeViewControllerDelegate{
 
     @IBOutlet weak var txtBodyView: UITextView!
-    
-    
     @IBOutlet weak var tfSubject: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Contact us"

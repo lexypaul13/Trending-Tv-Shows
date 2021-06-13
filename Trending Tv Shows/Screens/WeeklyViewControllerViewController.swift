@@ -96,12 +96,10 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate {
             activeArray = filteredShows[indexPath.row]
         }
         
-        
         let show = Show(id: activeArray.id, overview: activeArray.overview, voteCount: activeArray.voteCount, name: activeArray.name, backdropPath: activeArray.backdropPath, voteAverage: activeArray.voteAverage, firstAirDate: activeArray.firstAirDate)
         
         SaveManger.updateWith(favorite: show, actionType: .add, key: SaveManger.Keys.mostRecent){ error in
             guard error != nil else{
-            
                 return
             }
         }

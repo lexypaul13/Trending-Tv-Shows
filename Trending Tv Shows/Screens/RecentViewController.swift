@@ -2,7 +2,6 @@
 //  RecentViewController.swift
 //  Trending Tv Shows
 //
-//  Created by Muhammad Awais on 05/06/2021.
 //
 
 import UIKit
