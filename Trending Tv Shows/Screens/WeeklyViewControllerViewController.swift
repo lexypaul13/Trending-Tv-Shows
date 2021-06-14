@@ -51,9 +51,7 @@ class WeeklyViewController: UIViewController, UISearchBarDelegate {
     func setupSideMenu(){
         
         let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        
         SideMenuManager.default.menuFadeStatusBar = false
-        
         let menuLeftNavigationController = mainStoryboard.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? UISideMenuNavigationController
         SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
         SideMenuManager.default.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
