@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		35C8A029D0BD39F437C57036 /* Pods_Trending_Tv_Shows_Trending_Tv_ShowsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6E73732E3BA67FCC01E38E /* Pods_Trending_Tv_Shows_Trending_Tv_ShowsUITests.framework */; };
 		5730E32E25A6BFD200BD7D91 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E32D25A6BFD200BD7D91 /* TabBarViewController.swift */; };
-		5730E33325A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E33225A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift */; };
+		5730E33325A6C0B000BD7D91 /* WeeklyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E33225A6C0B000BD7D91 /* WeeklyViewController.swift */; };
 		5730E34325A6C6ED00BD7D91 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E34225A6C6ED00BD7D91 /* Show.swift */; };
 		5730E34825A6CEC900BD7D91 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E34725A6CEC900BD7D91 /* NetworkManager.swift */; };
 		5730E34D25A6CF0800BD7D91 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5730E34C25A6CF0800BD7D91 /* ErrorMessage.swift */; };
@@ -66,7 +66,7 @@
 		2A6E73732E3BA67FCC01E38E /* Pods_Trending_Tv_Shows_Trending_Tv_ShowsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trending_Tv_Shows_Trending_Tv_ShowsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4960A8938BD4BB7508AA92BA /* Pods_Trending_Tv_Shows.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trending_Tv_Shows.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5730E32D25A6BFD200BD7D91 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		5730E33225A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyViewControllerViewController.swift; sourceTree = "<group>"; };
+		5730E33225A6C0B000BD7D91 /* WeeklyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyViewController.swift; sourceTree = "<group>"; };
 		5730E34225A6C6ED00BD7D91 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		5730E34725A6CEC900BD7D91 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5730E34C25A6CF0800BD7D91 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 				B50C71D3266BBCA600ED49D2 /* ContactUsViewController */,
 				B50C71BF266B735F00ED49D2 /* AboutUsViewController */,
 				B50C719A266B608000ED49D2 /* SideMenu */,
-				5730E33225A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift */,
+				5730E33225A6C0B000BD7D91 /* WeeklyViewController.swift */,
 				573EC6F425BA6EC7003477E1 /* DetailśViewController.swift */,
 				57E3B75625A563BB00C98BF6 /* FavoriteViewController.swift */,
 				57A3232B25C65E7D009BE35C /* UI+Ext.swift */,
@@ -576,7 +576,7 @@
 				57A3232C25C65E7D009BE35C /* UI+Ext.swift in Sources */,
 				57AD1C1425A97B450079E829 /* BodyLabel.swift in Sources */,
 				573EC70525BA7F08003477E1 /* SaveManager .swift in Sources */,
-				5730E33325A6C0B000BD7D91 /* WeeklyViewControllerViewController.swift in Sources */,
+				5730E33325A6C0B000BD7D91 /* WeeklyViewController.swift in Sources */,
 				5730E34825A6CEC900BD7D91 /* NetworkManager.swift in Sources */,
 				5730E34D25A6CF0800BD7D91 /* ErrorMessage.swift in Sources */,
 				57EB3D4825AAB91000265DCF /* TvCellCollectionViewCell.swift in Sources */,

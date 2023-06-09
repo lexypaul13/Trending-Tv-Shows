@@ -28,8 +28,8 @@ class TvCellCollectionViewCell: UICollectionViewCell {
     }
     
     private func set() {
-        addSubview(tvImage)
-        addSubview(tvName)
+        contentView.addSubview(tvImage)
+        contentView.addSubview(tvName)
         tvImage.translatesAutoresizingMaskIntoConstraints = false
         tvName.translatesAutoresizingMaskIntoConstraints = false
         let padding : CGFloat = 8
